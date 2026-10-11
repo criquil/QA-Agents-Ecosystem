@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "plan_id": "20261010-coe-template",
+    "objective": "Plantilla de contexto acumulado — reemplazar con el objetivo real",
+    "domain": "qa-governance",
+    "discipline": "process-quality",
+    "created": "2026-10-10",
+    "last_updated": "2026-10-10",
+    "agent": "maru"
+  },
+  "diagnostico": {
+    "status": "pending",
+    "current_state": null,
+    "findings": [],
+    "risks": [],
+    "compliance_gaps": []
+  },
+  "plan": {
+    "status": "pending",
+    "actions": [],
+    "owners": [],
+    "due_dates": [],
+    "acceptance_criteria": null
+  },
+  "ejecucion": {
+    "status": "pending",
+    "executed_actions": [],
+    "evidence": [],
+    "metrics": {}
+  },
+  "mejora_continua": {
+    "status": "pending",
+    "closed_findings": [],
+    "lessons_learned": [],
+    "standards_updated": []
+  }
+}

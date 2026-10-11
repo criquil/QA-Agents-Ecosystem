@@ -1,0 +1,327 @@
+- generic [ref=f71e2]:
+  - text: SHOP
+  - navigation [ref=f71e3]:
+    - generic [ref=f71e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f71e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic:
+              - 'link "Shopping cart: 0 items"':
+                - /url: /cart
+  - main [ref=f71e7]:
+    - generic [ref=f71e8]:
+      - img "Men's T-Shirts" [ref=f71e10]
+      - generic [ref=f71e11]:
+        - heading "Men's T-Shirts" [level=1] [ref=f71e12]
+        - text: (40 items)
+      - list [ref=f71e13]:
+        - listitem [ref=f71e14]:
+          - link "YouTube Organic Cotton T-Shirt - Grey YouTube Organic Cotton T-Shirt - Grey $14.75" [ref=f71e15] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/YouTube+Organic+Cotton+T-Shirt+-+Grey
+            - generic [ref=f71e16]:
+              - img "YouTube Organic Cotton T-Shirt - Grey" [ref=f71e18]
+              - generic [ref=f71e19]: YouTube Organic Cotton T-Shirt - Grey
+              - generic [ref=f71e20]: $14.75
+        - listitem [ref=f71e21]:
+          - link "Inbox - Subtle Actions T-Shirt Inbox - Subtle Actions T-Shirt $17.05" [ref=f71e22] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Inbox+-+Subtle+Actions+T-Shirt
+            - generic [ref=f71e23]:
+              - img "Inbox - Subtle Actions T-Shirt" [ref=f71e25]
+              - generic [ref=f71e26]: Inbox - Subtle Actions T-Shirt
+              - generic [ref=f71e27]: $17.05
+        - listitem [ref=f71e28]:
+          - link "Adult Android Superhero T-Shirt Adult Android Superhero T-Shirt $14.95" [ref=f71e29] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Adult+Android+Superhero+T-Shirt
+            - generic [ref=f71e30]:
+              - img "Adult Android Superhero T-Shirt" [ref=f71e32]
+              - generic [ref=f71e33]: Adult Android Superhero T-Shirt
+              - generic [ref=f71e34]: $14.95
+        - listitem [ref=f71e35]:
+          - link "Men's Vintage Heather T-Shirt Men's Vintage Heather T-Shirt $15.80" [ref=f71e36] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Men+s+Vintage+Heather+T-Shirt
+            - generic [ref=f71e37]:
+              - img "Men's Vintage Heather T-Shirt" [ref=f71e39]
+              - generic [ref=f71e40]: Men's Vintage Heather T-Shirt
+              - generic [ref=f71e41]: $15.80
+        - listitem [ref=f71e42]:
+          - link "Basic Black T-Shirt Basic Black T-Shirt $16.90" [ref=f71e43] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Basic+Black+T-Shirt
+            - generic [ref=f71e44]:
+              - img "Basic Black T-Shirt" [ref=f71e46]
+              - generic [ref=f71e47]: Basic Black T-Shirt
+              - generic [ref=f71e48]: $16.90
+        - listitem [ref=f71e49]:
+          - link "Local Guides T-Shirt Local Guides T-Shirt $15.70" [ref=f71e50] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Local+Guides+T-Shirt
+            - generic [ref=f71e51]:
+              - img "Local Guides T-Shirt" [ref=f71e53]
+              - generic [ref=f71e54]: Local Guides T-Shirt
+              - generic [ref=f71e55]: $15.70
+        - listitem [ref=f71e56]:
+          - link "Go Gopher T-Shirt in Teal Go Gopher T-Shirt in Teal $10.95" [ref=f71e57] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Go+Gopher+T-Shirt+in+Teal
+            - generic [ref=f71e58]:
+              - img "Go Gopher T-Shirt in Teal" [ref=f71e60]
+              - generic [ref=f71e61]: Go Gopher T-Shirt in Teal
+              - generic [ref=f71e62]: $10.95
+        - listitem [ref=f71e63]:
+          - link "Android Ringspun T-Shirt - Green Android Ringspun T-Shirt - Green $8.75" [ref=f71e64] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+            - generic [ref=f71e65]:
+              - img "Android Ringspun T-Shirt - Green" [ref=f71e67]
+              - generic [ref=f71e68]: Android Ringspun T-Shirt - Green
+              - generic [ref=f71e69]: $8.75
+        - listitem [ref=f71e70]:
+          - link "Organic Cotton Android walking with dog T-shirt Organic Cotton Android walking with dog T-shirt $17.25" [ref=f71e71] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Organic+Cotton+Android+walking+with+dog+T-shirt
+            - generic [ref=f71e72]:
+              - img "Organic Cotton Android walking with dog T-shirt" [ref=f71e74]
+              - generic [ref=f71e75]: Organic Cotton Android walking with dog T-shirt
+              - generic [ref=f71e76]: $17.25
+        - listitem [ref=f71e77]:
+          - link "Organic Cotton T-Shirt - Red Organic Cotton T-Shirt - Red $14.40" [ref=f71e78] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Organic+Cotton+T-Shirt+-+Red
+            - generic [ref=f71e79]:
+              - img "Organic Cotton T-Shirt - Red" [ref=f71e81]
+              - generic [ref=f71e82]: Organic Cotton T-Shirt - Red
+              - generic [ref=f71e83]: $14.40
+        - listitem [ref=f71e84]:
+          - link "Unisex Gmail T-Shirt Unisex Gmail T-Shirt $15.00" [ref=f71e85] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Unisex+Gmail+T-Shirt
+            - generic [ref=f71e86]:
+              - img "Unisex Gmail T-Shirt" [ref=f71e88]
+              - generic [ref=f71e89]: Unisex Gmail T-Shirt
+              - generic [ref=f71e90]: $15.00
+        - listitem [ref=f71e91]:
+          - link "Android Soccer T-Shirt Android Soccer T-Shirt $15.20" [ref=f71e92] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Soccer+T-Shirt
+            - generic [ref=f71e93]:
+              - img "Android Soccer T-Shirt" [ref=f71e95]
+              - generic [ref=f71e96]: Android Soccer T-Shirt
+              - generic [ref=f71e97]: $15.20
+        - listitem [ref=f71e98]:
+          - link "Basic Google T-Shirt Basic Google T-Shirt $13.30" [ref=f71e99] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Basic+Google+T-Shirt
+            - generic [ref=f71e100]:
+              - img "Basic Google T-Shirt" [ref=f71e102]
+              - generic [ref=f71e103]: Basic Google T-Shirt
+              - generic [ref=f71e104]: $13.30
+        - listitem [ref=f71e105]:
+          - link "Tri-Blend V-Neck Tee Tri-Blend V-Neck Tee $14.95" [ref=f71e106] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Tri-Blend+V-Neck+Tee
+            - generic [ref=f71e107]:
+              - img "Tri-Blend V-Neck Tee" [ref=f71e109]
+              - generic [ref=f71e110]: Tri-Blend V-Neck Tee
+              - generic [ref=f71e111]: $14.95
+        - listitem [ref=f71e112]:
+          - link "Heather Pocket Tee - Light Blue Heather Pocket Tee - Light Blue $23.30" [ref=f71e113] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Heather+Pocket+Tee+-+Light+Blue
+            - generic [ref=f71e114]:
+              - img "Heather Pocket Tee - Light Blue" [ref=f71e116]
+              - generic [ref=f71e117]: Heather Pocket Tee - Light Blue
+              - generic [ref=f71e118]: $23.30
+        - listitem [ref=f71e119]:
+          - link "Google Now Skyline T-Shirt Google Now Skyline T-Shirt $20.20" [ref=f71e120] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Google+Now+Skyline+T-Shirt
+            - generic [ref=f71e121]:
+              - img "Google Now Skyline T-Shirt" [ref=f71e123]
+              - generic [ref=f71e124]: Google Now Skyline T-Shirt
+              - generic [ref=f71e125]: $20.20
+        - listitem [ref=f71e126]:
+          - link "Tri-Blend G Logo Men's Polo Tri-Blend G Logo Men's Polo $32.70" [ref=f71e127] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Tri-Blend+G+Logo+Men+s+Polo
+            - generic [ref=f71e128]:
+              - img "Tri-Blend G Logo Men's Polo" [ref=f71e130]
+              - generic [ref=f71e131]: Tri-Blend G Logo Men's Polo
+              - generic [ref=f71e132]: $32.70
+        - listitem [ref=f71e133]:
+          - link "Tri-Blend Leisure Shirt Tri-Blend Leisure Shirt $32.95" [ref=f71e134] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Tri-Blend+Leisure+Shirt
+            - generic [ref=f71e135]:
+              - generic [ref=f71e136]:
+                - img "Tri-Blend Leisure Shirt"
+              - generic [ref=f71e137]: Tri-Blend Leisure Shirt
+              - generic [ref=f71e138]: $32.95
+        - listitem [ref=f71e139]:
+          - link "Wise Android T-Shirt Wise Android T-Shirt $14.95" [ref=f71e140] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Wise+Android+T-Shirt
+            - generic [ref=f71e141]:
+              - generic [ref=f71e142]:
+                - img "Wise Android T-Shirt"
+              - generic [ref=f71e143]: Wise Android T-Shirt
+              - generic [ref=f71e144]: $14.95
+        - listitem [ref=f71e145]:
+          - link "Android Pride T-Shirt Android Pride T-Shirt $19.10" [ref=f71e146] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Pride+T-Shirt
+            - generic [ref=f71e147]:
+              - generic [ref=f71e148]:
+                - img "Android Pride T-Shirt"
+              - generic [ref=f71e149]: Android Pride T-Shirt
+              - generic [ref=f71e150]: $19.10
+        - listitem [ref=f71e151]:
+          - link "Chrome Unisex T-Shirt Chrome Unisex T-Shirt $11.35" [ref=f71e152] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Chrome+Unisex+T-Shirt
+            - generic [ref=f71e153]:
+              - generic [ref=f71e154]:
+                - img "Chrome Unisex T-Shirt"
+              - generic [ref=f71e155]: Chrome Unisex T-Shirt
+              - generic [ref=f71e156]: $11.35
+        - listitem [ref=f71e157]:
+          - link "NY City Lights T-Shirt NY City Lights T-Shirt $18.35" [ref=f71e158] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/NY+City+Lights+T-Shirt
+            - generic [ref=f71e159]:
+              - generic [ref=f71e160]:
+                - img "NY City Lights T-Shirt"
+              - generic [ref=f71e161]: NY City Lights T-Shirt
+              - generic [ref=f71e162]: $18.35
+        - listitem [ref=f71e163]:
+          - link "Omi Tech Tee Omi Tech Tee $17.00" [ref=f71e164] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Omi+Tech+Tee
+            - generic [ref=f71e165]:
+              - generic [ref=f71e166]:
+                - img "Omi Tech Tee"
+              - generic [ref=f71e167]: Omi Tech Tee
+              - generic [ref=f71e168]: $17.00
+        - listitem [ref=f71e169]:
+          - link "YouTube S/S Triblend T-Shirt YouTube S/S Triblend T-Shirt $14.90" [ref=f71e170] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/YouTube+S+S+Triblend+T-Shirt
+            - generic [ref=f71e171]:
+              - generic [ref=f71e172]:
+                - img "YouTube S/S Triblend T-Shirt"
+              - generic [ref=f71e173]: YouTube S/S Triblend T-Shirt
+              - generic [ref=f71e174]: $14.90
+        - listitem [ref=f71e175]:
+          - link "Nest T-Shirt Nest T-Shirt $17.40" [ref=f71e176] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Nest+T-Shirt
+            - generic [ref=f71e177]:
+              - generic [ref=f71e178]:
+                - img "Nest T-Shirt"
+              - generic [ref=f71e179]: Nest T-Shirt
+              - generic [ref=f71e180]: $17.40
+        - listitem [ref=f71e181]:
+          - link "98 Short Sleeve Tee 98 Short Sleeve Tee $14.30" [ref=f71e182] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/98+Short+Sleeve+Tee
+            - generic [ref=f71e183]:
+              - generic [ref=f71e184]:
+                - img "98 Short Sleeve Tee"
+              - generic [ref=f71e185]: 98 Short Sleeve Tee
+              - generic [ref=f71e186]: $14.30
+        - listitem [ref=f71e187]:
+          - link "Cardboard T-Shirt Cardboard T-Shirt $14.20" [ref=f71e188] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Cardboard+T-Shirt
+            - generic [ref=f71e189]:
+              - generic [ref=f71e190]:
+                - img "Cardboard T-Shirt"
+              - generic [ref=f71e191]: Cardboard T-Shirt
+              - generic [ref=f71e192]: $14.20
+        - listitem [ref=f71e193]:
+          - link "Short Sleeve Crew Neck Raglan Short Sleeve Crew Neck Raglan $13.10" [ref=f71e194] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Short+Sleeve+Crew+Neck+Raglan
+            - generic [ref=f71e195]:
+              - generic [ref=f71e196]:
+                - img "Short Sleeve Crew Neck Raglan"
+              - generic [ref=f71e197]: Short Sleeve Crew Neck Raglan
+              - generic [ref=f71e198]: $13.10
+        - listitem [ref=f71e199]:
+          - link "MTV Unisex Blue T-Shirt MTV Unisex Blue T-Shirt $15.75" [ref=f71e200] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/MTV+Unisex+Blue+T-Shirt
+            - generic [ref=f71e201]:
+              - generic [ref=f71e202]:
+                - img "MTV Unisex Blue T-Shirt"
+              - generic [ref=f71e203]: MTV Unisex Blue T-Shirt
+              - generic [ref=f71e204]: $15.75
+        - listitem [ref=f71e205]:
+          - link "Organic Me-To-We Tee Organic Me-To-We Tee $23.60" [ref=f71e206] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Organic+Me-To-We+Tee
+            - generic [ref=f71e207]:
+              - generic [ref=f71e208]:
+                - img "Organic Me-To-We Tee"
+              - generic [ref=f71e209]: Organic Me-To-We Tee
+              - generic [ref=f71e210]: $23.60
+        - listitem [ref=f71e211]:
+          - link "Tri-Blend Raglan Long Sleeve Tri-Blend Raglan Long Sleeve $51.20" [ref=f71e212] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Tri-Blend+Raglan+Long+Sleeve
+            - generic [ref=f71e213]:
+              - generic [ref=f71e214]:
+                - img "Tri-Blend Raglan Long Sleeve"
+              - generic [ref=f71e215]: Tri-Blend Raglan Long Sleeve
+              - generic [ref=f71e216]: $51.20
+        - listitem [ref=f71e217]:
+          - link "Blueprint for a Better Inbox T-Shirt Blueprint for a Better Inbox T-Shirt $14.30" [ref=f71e218] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Blueprint+for+a+Better+Inbox+T-Shirt
+            - generic [ref=f71e219]:
+              - generic [ref=f71e220]:
+                - img "Blueprint for a Better Inbox T-Shirt"
+              - generic [ref=f71e221]: Blueprint for a Better Inbox T-Shirt
+              - generic [ref=f71e222]: $14.30
+        - listitem [ref=f71e223]:
+          - link "YouTube Player T-Shirt - Unisex YouTube Player T-Shirt - Unisex $17.80" [ref=f71e224] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/YouTube+Player+T-Shirt+-+Unisex
+            - generic [ref=f71e225]:
+              - generic [ref=f71e226]:
+                - img "YouTube Player T-Shirt - Unisex"
+              - generic [ref=f71e227]: YouTube Player T-Shirt - Unisex
+              - generic [ref=f71e228]: $17.80
+        - listitem [ref=f71e229]:
+          - link "G Logo White T-Shirt G Logo White T-Shirt $13.00" [ref=f71e230] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/G+Logo+White+T-Shirt
+            - generic [ref=f71e231]:
+              - generic [ref=f71e232]:
+                - img "G Logo White T-Shirt"
+              - generic [ref=f71e233]: G Logo White T-Shirt
+              - generic [ref=f71e234]: $13.00
+        - listitem [ref=f71e235]:
+          - link "Android Concert T-Shirt Android Concert T-Shirt $13.65" [ref=f71e236] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Concert+T-Shirt
+            - generic [ref=f71e237]:
+              - generic [ref=f71e238]:
+                - img "Android Concert T-Shirt"
+              - generic [ref=f71e239]: Android Concert T-Shirt
+              - generic [ref=f71e240]: $13.65
+        - listitem [ref=f71e241]:
+          - link "Men's Bamboo T-Shirt Men's Bamboo T-Shirt $20.65" [ref=f71e242] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Men+s+Bamboo+T-Shirt
+            - generic [ref=f71e243]:
+              - generic [ref=f71e244]:
+                - img "Men's Bamboo T-Shirt"
+              - generic [ref=f71e245]: Men's Bamboo T-Shirt
+              - generic [ref=f71e246]: $20.65
+        - listitem [ref=f71e247]:
+          - link "Android Pay Crew Neck T-Shirt Android Pay Crew Neck T-Shirt $19.40" [ref=f71e248] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Pay+Crew+Neck+T-Shirt
+            - generic [ref=f71e249]:
+              - generic [ref=f71e250]:
+                - img "Android Pay Crew Neck T-Shirt"
+              - generic [ref=f71e251]: Android Pay Crew Neck T-Shirt
+              - generic [ref=f71e252]: $19.40
+        - listitem [ref=f71e253]:
+          - link "Google Maps T-Shirt Google Maps T-Shirt $18.35" [ref=f71e254] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Google+Maps+T-Shirt
+            - generic [ref=f71e255]:
+              - generic [ref=f71e256]:
+                - img "Google Maps T-Shirt"
+              - generic [ref=f71e257]: Google Maps T-Shirt
+              - generic [ref=f71e258]: $18.35
+        - listitem [ref=f71e259]:
+          - link "Est. 98 Baseball Tee Est. 98 Baseball Tee $17.90" [ref=f71e260] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Est.+98+Baseball+Tee
+            - generic [ref=f71e261]:
+              - generic [ref=f71e262]:
+                - img "Est. 98 Baseball Tee"
+              - generic [ref=f71e263]: Est. 98 Baseball Tee
+              - generic [ref=f71e264]: $17.90
+        - listitem [ref=f71e265]:
+          - link "Mountain View T-Shirt Mountain View T-Shirt $16.50" [ref=f71e266] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Mountain+View+T-Shirt
+            - generic [ref=f71e267]:
+              - generic [ref=f71e268]:
+                - img "Mountain View T-Shirt"
+              - generic [ref=f71e269]: Mountain View T-Shirt
+              - generic [ref=f71e270]: $16.50
+  - contentinfo [ref=f71e271]:
+    - link "Made by Polymer" [ref=f71e272] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f71e273]: Demo Only

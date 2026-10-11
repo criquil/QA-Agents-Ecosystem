@@ -1,0 +1,147 @@
+- generic [ref=f9e2]:
+  - text: SHOP
+  - navigation [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f9e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f9e7] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f9e8]'
+        - generic [ref=f9e12]:
+          - generic:
+            - link "Men's Outerwear" [ref=f9e15] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f9e18] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f9e21] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f9e24] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f9e25]:
+    - generic [ref=f9e26]:
+      - img "Men's Outerwear" [ref=f9e28]
+      - generic [ref=f9e29]:
+        - heading "Men's Outerwear" [level=1] [ref=f9e30]
+        - text: (16 items)
+      - list [ref=f9e31]:
+        - listitem [ref=f9e32]:
+          - link "Men's Tech Shell Full-Zip Men's Tech Shell Full-Zip $50.20" [ref=f9e75] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Men+s+Tech+Shell+Full-Zip
+            - generic [ref=f9e34]:
+              - img "Men's Tech Shell Full-Zip" [ref=f9e76]
+              - generic [ref=f9e77]: Men's Tech Shell Full-Zip
+              - generic [ref=f9e78]: $50.20
+        - listitem [ref=f9e36]:
+          - link "Anvil L/S Crew Neck - Grey Anvil L/S Crew Neck - Grey $22.15" [ref=f9e79] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Anvil+L+S+Crew+Neck+-+Grey
+            - generic [ref=f9e38]:
+              - img "Anvil L/S Crew Neck - Grey" [ref=f9e80]
+              - generic [ref=f9e81]: Anvil L/S Crew Neck - Grey
+              - generic [ref=f9e82]: $22.15
+        - listitem [ref=f9e40]:
+          - link "Green Flex Fleece Zip Hoodie Green Flex Fleece Zip Hoodie $45.65" [ref=f9e83] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Green+Flex+Fleece+Zip+Hoodie
+            - generic [ref=f9e42]:
+              - img "Green Flex Fleece Zip Hoodie" [ref=f9e84]
+              - generic [ref=f9e85]: Green Flex Fleece Zip Hoodie
+              - generic [ref=f9e86]: $45.65
+        - listitem [ref=f9e44]:
+          - link "Android Nylon Packable Jacket Android Nylon Packable Jacket $33.60" [ref=f9e87] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Android+Nylon+Packable+Jacket
+            - generic [ref=f9e46]:
+              - img "Android Nylon Packable Jacket" [ref=f9e88]
+              - generic [ref=f9e89]: Android Nylon Packable Jacket
+              - generic [ref=f9e90]: $33.60
+        - listitem [ref=f9e91]:
+          - link "YouTube Ultimate Hooded Sweatshirt YouTube Ultimate Hooded Sweatshirt $32.35" [ref=f9e92] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/YouTube+Ultimate+Hooded+Sweatshirt
+            - generic [ref=f9e93]:
+              - img "YouTube Ultimate Hooded Sweatshirt" [ref=f9e95]
+              - generic [ref=f9e96]: YouTube Ultimate Hooded Sweatshirt
+              - generic [ref=f9e97]: $32.35
+        - listitem [ref=f9e98]:
+          - link "Grey Heather Fleece Zip Hoodie Grey Heather Fleece Zip Hoodie $38.85" [ref=f9e99] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Grey+Heather+Fleece+Zip+Hoodie
+            - generic [ref=f9e100]:
+              - img "Grey Heather Fleece Zip Hoodie" [ref=f9e102]
+              - generic [ref=f9e103]: Grey Heather Fleece Zip Hoodie
+              - generic [ref=f9e104]: $38.85
+        - listitem [ref=f9e105]:
+          - link "Vastrm Hoodie Vastrm Hoodie $200.00" [ref=f9e106] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Vastrm+Hoodie
+            - generic [ref=f9e107]:
+              - img "Vastrm Hoodie" [ref=f9e109]
+              - generic [ref=f9e110]: Vastrm Hoodie
+              - generic [ref=f9e111]: $200.00
+        - listitem [ref=f9e112]:
+          - link "Recycled Plastic Bottle Hoodie - Green Recycled Plastic Bottle Hoodie - Green $60.95" [ref=f9e113] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Recycled+Plastic+Bottle+Hoodie+-+Green
+            - generic [ref=f9e114]:
+              - img "Recycled Plastic Bottle Hoodie - Green" [ref=f9e116]
+              - generic [ref=f9e117]: Recycled Plastic Bottle Hoodie - Green
+              - generic [ref=f9e118]: $60.95
+        - listitem [ref=f9e119]:
+          - link "Rowan Pullover Hood Rowan Pullover Hood $60.85" [ref=f9e120] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Rowan+Pullover+Hood
+            - generic [ref=f9e121]:
+              - img "Rowan Pullover Hood" [ref=f9e123]
+              - generic [ref=f9e124]: Rowan Pullover Hood
+              - generic [ref=f9e125]: $60.85
+        - listitem [ref=f9e126]:
+          - link "Men's Voyage Fleece Jacket Men's Voyage Fleece Jacket $48.00" [ref=f9e127] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Men+s+Voyage+Fleece+Jacket
+            - generic [ref=f9e128]:
+              - img "Men's Voyage Fleece Jacket" [ref=f9e130]
+              - generic [ref=f9e131]: Men's Voyage Fleece Jacket
+              - generic [ref=f9e132]: $48.00
+        - listitem [ref=f9e133]:
+          - link "Eco-Jersey Chrome Zip Up Hoodie Eco-Jersey Chrome Zip Up Hoodie $37.75" [ref=f9e134] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Eco-Jersey+Chrome+Zip+Up+Hoodie
+            - generic [ref=f9e135]:
+              - img "Eco-Jersey Chrome Zip Up Hoodie" [ref=f9e137]
+              - generic [ref=f9e138]: Eco-Jersey Chrome Zip Up Hoodie
+              - generic [ref=f9e139]: $37.75
+        - listitem [ref=f9e140]:
+          - link "Android Colorblock Hooded Pullover Android Colorblock Hooded Pullover $50.20" [ref=f9e141] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Android+Colorblock+Hooded+Pullover
+            - generic [ref=f9e142]:
+              - img "Android Colorblock Hooded Pullover" [ref=f9e144]
+              - generic [ref=f9e145]: Android Colorblock Hooded Pullover
+              - generic [ref=f9e146]: $50.20
+        - listitem [ref=f9e147]:
+          - link "Tri-blend Full-Zip Hoodie Tri-blend Full-Zip Hoodie $52.20" [ref=f9e148] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Tri-blend+Full-Zip+Hoodie
+            - generic [ref=f9e149]:
+              - img "Tri-blend Full-Zip Hoodie" [ref=f9e151]
+              - generic [ref=f9e152]: Tri-blend Full-Zip Hoodie
+              - generic [ref=f9e153]: $52.20
+        - listitem [ref=f9e154]:
+          - link "Fleece Full-Zip Hoodie Fleece Full-Zip Hoodie $45.65" [ref=f9e155] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Fleece+Full-Zip+Hoodie
+            - generic [ref=f9e156]:
+              - img "Fleece Full-Zip Hoodie" [ref=f9e158]
+              - generic [ref=f9e159]: Fleece Full-Zip Hoodie
+              - generic [ref=f9e160]: $45.65
+        - listitem [ref=f9e161]:
+          - link "Jacquard-Knit Full-Zip Fleece Jacquard-Knit Full-Zip Fleece $74.90" [ref=f9e162] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/Jacquard-Knit+Full-Zip+Fleece
+            - generic [ref=f9e163]:
+              - img "Jacquard-Knit Full-Zip Fleece" [ref=f9e165]
+              - generic [ref=f9e166]: Jacquard-Knit Full-Zip Fleece
+              - generic [ref=f9e167]: $74.90
+        - listitem [ref=f9e168]:
+          - link "YouTube Unisex Flex Fleece Zip Hoodie YouTube Unisex Flex Fleece Zip Hoodie $45.25" [ref=f9e169] [cursor=pointer]:
+            - /url: /detail/mens_outerwear/YouTube+Unisex+Flex+Fleece+Zip+Hoodie
+            - generic [ref=f9e170]:
+              - img "YouTube Unisex Flex Fleece Zip Hoodie" [ref=f9e172]
+              - generic [ref=f9e173]: YouTube Unisex Flex Fleece Zip Hoodie
+              - generic [ref=f9e174]: $45.25
+  - contentinfo [ref=f9e72]:
+    - link "Made by Polymer" [ref=f9e73] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f9e74]: Demo Only
+  - generic: Men's Outerwear, loaded

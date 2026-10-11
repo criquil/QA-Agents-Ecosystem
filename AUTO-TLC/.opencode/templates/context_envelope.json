@@ -1,0 +1,119 @@
+{
+  "$schema_note": "Envelope de contexto acumulado. Se escribe al cerrar cada fase. Las fases siguientes leen esto en vez de releer los artefactos completos.",
+  "plan_id": "YYYYMMDD-app-short-name",
+  "updated_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "current_phase": "phase-1-intake",
+
+  "application": {
+    "name": "",
+    "type": "",
+    "base_url": "",
+    "environments_available": []
+  },
+
+  "stack": {
+    "framework": "",
+    "language": "",
+    "id": "",
+    "rationale": []
+  },
+
+  "phase_outputs": {
+    "phase-1-intake": {
+      "completed": false,
+      "status": "",
+      "key_facts": {
+        "objective": "",
+        "scope_features": [],
+        "success_criteria": [],
+        "cicd_platform": ""
+      },
+      "open_questions": []
+    },
+
+    "phase-2-diagnostics": {
+      "completed": false,
+      "status": "",
+      "readiness_score": null,
+      "key_facts": {
+        "ui_stability": "low|medium|high",
+        "js_widgets_present": [],
+        "js_interaction_pattern": "",
+        "credentials_available": null,
+        "mcp_available": { "playwright": null, "chrome_devtools": null }
+      },
+      "blocking_issues": [],
+      "risks_high": []
+    },
+
+    "phase-3-procedure-plan": {
+      "completed": false,
+      "status": "",
+      "key_facts": {
+        "pyramid": { "unit": 0, "integration": 0, "e2e": 0 },
+        "total_scenarios": 0,
+        "features_automated": [],
+        "features_excluded": [],
+        "execution_order": [],
+        "cleanup_strategy": ""
+      }
+    },
+
+    "phase-4-test-plan": {
+      "completed": false,
+      "status": "",
+      "awaiting_approval": true,
+      "key_facts": {
+        "success_criteria": {},
+        "orphan_scenarios": 0,
+        "out_of_scope": []
+      }
+    },
+
+    "phase-5-execution": {
+      "completed": false,
+      "status": "",
+      "key_facts": {
+        "project_path": "",
+        "selectors_validated": 0,
+        "selectors_reused": 0,
+        "page_objects_created": 0,
+        "tests_created": 0,
+        "smoke_result": ""
+      },
+      "violations": []
+    },
+
+    "phase-6-analysis": {
+      "completed": false,
+      "status": "",
+      "analysis_mode": "individual",
+      "verdict": null,
+      "key_facts": {
+        "pass_rate_pct": null,
+        "flakiness_pct": null,
+        "smoke_duration_min": null,
+        "feature_coverage_pct": null,
+        "criteria_missed": []
+      },
+      "report_path": ""
+    }
+  },
+
+  "decisions": [
+    {
+      "phase": "",
+      "decision": "",
+      "rationale": "",
+      "date": ""
+    }
+  ],
+
+  "debt": [
+    {
+      "item": "",
+      "severity": "HIGH | MEDIUM | LOW",
+      "review_by": ""
+    }
+  ]
+}

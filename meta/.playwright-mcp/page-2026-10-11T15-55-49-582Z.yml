@@ -1,0 +1,128 @@
+- generic [active] [ref=f72e2]:
+  - text: SHOP
+  - navigation [ref=f72e3]:
+    - generic [ref=f72e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f72e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic [ref=f72e6]:
+              - link [ref=f72e57] [cursor=pointer]:
+                - /url: /cart
+                - 'button "Shopping cart: 3 items" [ref=f72e58]'
+              - generic [aria-hidden]: "3"
+  - main [ref=f72e10]:
+    - generic:
+      - text: ▼
+      - generic [ref=f72e64]:
+        - generic [ref=f72e65]:
+          - heading "Checkout" [level=1] [ref=f72e66]
+          - text: Shop is a demo app - form data will not be sent
+        - generic [ref=f72e67]:
+          - generic [ref=f72e68]:
+            - heading "Account Information" [level=2] [ref=f72e69]
+            - generic [ref=f72e71]:
+              - textbox "Email Account Information" [ref=f72e72]:
+                - /placeholder: Email
+              - generic [aria-hidden] [ref=f72e73]:
+                - generic: Email
+            - generic [ref=f72e76]:
+              - textbox "Phone Number Account Information" [ref=f72e77]:
+                - /placeholder: Phone Number
+              - generic [aria-hidden] [ref=f72e78]:
+                - generic: Phone Number
+            - heading "Shipping Address" [level=2] [ref=f72e79]
+            - generic [ref=f72e81]:
+              - textbox "Address Shipping Address" [ref=f72e82]:
+                - /placeholder: Address
+              - generic [aria-hidden] [ref=f72e83]:
+                - generic: Address
+            - generic [ref=f72e85]:
+              - textbox "City Shipping Address" [ref=f72e86]:
+                - /placeholder: City
+              - generic [aria-hidden] [ref=f72e87]:
+                - generic: City
+            - generic [ref=f72e88]:
+              - generic [ref=f72e89]:
+                - textbox "State/Province Shipping Address" [ref=f72e90]:
+                  - /placeholder: State/Province
+                - generic [aria-hidden] [ref=f72e91]:
+                  - generic: State/Province
+              - generic [ref=f72e92]:
+                - textbox "Zip/Postal Code Shipping Address" [ref=f72e93]:
+                  - /placeholder: Zip/Postal Code
+                - generic [aria-hidden] [ref=f72e94]:
+                  - generic: Zip/Postal Code
+            - generic [ref=f72e95]:
+              - generic [ref=f72e96]: Country
+              - generic [ref=f72e97]:
+                - combobox "Country Shipping Address" [ref=f72e98]:
+                  - option "United States" [selected]
+                  - option "Canada"
+                - generic [aria-hidden] [ref=f72e99]: ▼
+            - heading "Billing Address" [level=2] [ref=f72e100]
+            - generic [ref=f72e101]:
+              - checkbox "Use different billing address" [ref=f72e103]
+              - generic [ref=f72e104]: Use different billing address
+            - text: ▼
+          - generic [ref=f72e105]:
+            - heading "Payment Method" [level=2] [ref=f72e106]
+            - generic [ref=f72e108]:
+              - textbox "Cardholder Name" [ref=f72e109]
+              - generic [aria-hidden] [ref=f72e110]:
+                - generic: Cardholder Name
+            - generic [ref=f72e112]:
+              - textbox "Card Number" [ref=f72e113]
+              - generic [aria-hidden] [ref=f72e114]:
+                - generic: Card Number
+            - generic [ref=f72e115]:
+              - generic [ref=f72e116]:
+                - generic [ref=f72e117]: Expiry
+                - generic [ref=f72e118]:
+                  - combobox "Expiry month" [ref=f72e119]:
+                    - option "Jan" [selected]
+                    - option "Feb"
+                    - option "Mar"
+                    - option "Apr"
+                    - option "May"
+                    - option "Jun"
+                    - option "Jul"
+                    - option "Aug"
+                    - option "Sep"
+                    - option "Oct"
+                    - option "Nov"
+                    - option "Dec"
+                  - generic [aria-hidden] [ref=f72e120]: ▼
+              - generic [ref=f72e121]:
+                - combobox "Expiry year" [ref=f72e122]:
+                  - option "2016" [selected]
+                  - option "2017"
+                  - option "2018"
+                  - option "2019"
+                  - option "2020"
+                  - option "2021"
+                  - option "2022"
+                  - option "2023"
+                  - option "2024"
+                  - option "2025"
+                  - option "2026"
+                - generic [aria-hidden] [ref=f72e123]: ▼
+              - generic [ref=f72e124]:
+                - textbox "CVV" [ref=f72e125]
+                - generic [aria-hidden] [ref=f72e126]:
+                  - generic: CVV
+            - heading "Order Summary" [level=2] [ref=f72e127]
+            - generic [ref=f72e128]:
+              - generic [ref=f72e129]: Android Ringspun T-Shirt - Green
+              - generic [ref=f72e130]: $26.25
+            - generic [ref=f72e131]:
+              - generic [ref=f72e132]: Total
+              - generic [ref=f72e133]: $26.25
+            - button "Place Order" [ref=f72e135]
+  - contentinfo [ref=f72e52]:
+    - link "Made by Polymer" [ref=f72e53] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f72e54]: Demo Only
+  - generic: Checkout, loaded

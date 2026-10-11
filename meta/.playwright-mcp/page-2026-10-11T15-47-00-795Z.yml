@@ -1,0 +1,32 @@
+- generic [ref=f22e2]:
+  - text: SHOP
+  - navigation [ref=f22e3]:
+    - generic [ref=f22e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f22e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic:
+              - 'link "Shopping cart: 0 items"':
+                - /url: /cart
+  - main [ref=f22e7]:
+    - generic [ref=f22e8]:
+      - img "Ladies Outerwear" [ref=f22e10]
+      - heading "Ladies Outerwear" [level=1] [ref=f22e12]
+      - list [ref=f22e13]:
+        - listitem [ref=f22e14]
+        - listitem [ref=f22e18]
+        - listitem [ref=f22e22]
+        - listitem [ref=f22e26]
+        - listitem [ref=f22e30]
+        - listitem [ref=f22e34]
+        - listitem [ref=f22e38]
+        - listitem [ref=f22e42]
+        - listitem [ref=f22e46]
+        - listitem [ref=f22e50]
+  - contentinfo [ref=f22e54]:
+    - link "Made by Polymer" [ref=f22e55] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f22e56]: Demo Only

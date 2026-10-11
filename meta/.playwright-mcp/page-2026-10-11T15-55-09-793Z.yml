@@ -1,0 +1,61 @@
+- generic [ref=f69e2]:
+  - text: SHOP
+  - navigation [ref=f69e3]:
+    - generic [ref=f69e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f69e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f69e7] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f69e8]'
+        - generic [ref=f69e12]:
+          - generic:
+            - link "Men's Outerwear" [ref=f69e15] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f69e18] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f69e21] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f69e24] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f69e25]:
+    - generic [ref=f69e26]:
+      - generic [ref=f69e27]:
+        - link [ref=f69e28] [cursor=pointer]:
+          - /url: /list/mens_outerwear
+          - img "Men's Outerwear" [ref=f69e30]
+        - heading "Men's Outerwear" [level=2] [ref=f69e31]
+        - link "Men's Outerwear Shop Now" [ref=f69e33] [cursor=pointer]:
+          - /url: /list/mens_outerwear
+          - text: Shop Now
+      - generic [ref=f69e34]:
+        - link [ref=f69e35] [cursor=pointer]:
+          - /url: /list/ladies_outerwear
+          - img "Ladies Outerwear" [ref=f69e37]
+        - heading "Ladies Outerwear" [level=2] [ref=f69e38]
+        - link "Ladies Outerwear Shop Now" [ref=f69e40] [cursor=pointer]:
+          - /url: /list/ladies_outerwear
+          - text: Shop Now
+      - generic [ref=f69e41]:
+        - link [ref=f69e42] [cursor=pointer]:
+          - /url: /list/mens_tshirts
+          - img "Men's T-Shirts" [ref=f69e44]
+        - heading "Men's T-Shirts" [level=2] [ref=f69e45]
+        - link "Men's T-Shirts Shop Now" [ref=f69e47] [cursor=pointer]:
+          - /url: /list/mens_tshirts
+          - text: Shop Now
+      - generic [ref=f69e48]:
+        - link [ref=f69e49] [cursor=pointer]:
+          - /url: /list/ladies_tshirts
+          - img "Ladies T-Shirts" [ref=f69e51]
+        - heading "Ladies T-Shirts" [level=2] [ref=f69e52]
+        - link "Ladies T-Shirts Shop Now" [ref=f69e54] [cursor=pointer]:
+          - /url: /list/ladies_tshirts
+          - text: Shop Now
+  - contentinfo [ref=f69e55]:
+    - link "Made by Polymer" [ref=f69e56] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f69e57]: Demo Only

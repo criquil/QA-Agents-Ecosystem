@@ -1,0 +1,42 @@
+name: COE-Maru
+version: 1.0
+owner: "COE Team"
+created: "2026-10-10"
+status: active
+
+vision: >
+  Ser el Center of Excellence de referencia en gobernanza de QA, garantizando que
+  toda disciplina de testing y los procesos del SDLC cumplan con estándares,
+  políticas de calidad y normas del mercado (ISO, WCAG, certificaciones).
+
+alcance:
+  - Gobernanza de políticas y estándares de calidad
+  - Revisión de procesos y auditorías de cumplimiento
+  - Supervisión cross-team de API, Manual, Automation, Performance, Accessibility
+  - Calidad de procesos del ciclo de vida de desarrollo (SDLC)
+
+no_objetivos:
+  - Ejecutar pruebas directamente (eso corresponde a los equipos de testing)
+  - Reemplazar herramientas de gestión de proyectos de los equipos
+  - Proveer servicios de performance testing como tales
+
+stakeholders:
+  - QA Leads
+  - Engineering Managers
+  - DevOps / SRE
+  - Product Owners
+  - Compliance / Legal
+
+normas_aplicables:
+  - ISO/IEC 25010
+  - ISO/IEC 29148
+  - ISO 9001
+  - ISO 27001
+  - WCAG 2.1 / 2.2
+  - Section 508
+  - EN 301 549
+
+certificaciones:
+  - ISTQB
+  - CMMI
+  - TMMi

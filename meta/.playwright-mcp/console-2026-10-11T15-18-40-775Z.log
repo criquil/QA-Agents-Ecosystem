@@ -1,0 +1,6 @@
+[    6916ms] TypeError: Cannot read properties of undefined (reading 'name')
+    at HTMLElement.addItem (https://shop.polymer-project.org/esm-bundled/src/lazy-resources.js?_sw-precache=e2c579823d475b28253e202528c890f9:3133:312)
+    at ShopApp._onAddCartItem (https://shop.polymer-project.org/esm-bundled/src/shop-app.js?_sw-precache=f6742b96c4cf013bdd874d475c959dad:8148:455)
+    at ShopApp.<anonymous> (https://shop.polymer-project.org/esm-bundled/src/shop-app.js?_sw-precache=f6742b96c4cf013bdd874d475c959dad:8130:47)
+    at HTMLElement._addToCart (https://shop.polymer-project.org/esm-bundled/src/shop-detail.js?_sw-precache=bdd5fe3a4b64c2f30ddac92d63088a8d:185:6)
+    at HTMLButtonElement.handler (https://shop.polymer-project.org/esm-bundled/src/shop-app.js?_sw-precache=f6742b96c4cf013bdd874d475c959dad:1541:105)

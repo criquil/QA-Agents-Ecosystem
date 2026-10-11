@@ -1,0 +1,18 @@
+- generic [ref=f47e2]:
+  - text: SHOP
+  - navigation [ref=f47e3]:
+    - generic [ref=f47e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f47e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic:
+              - 'link "Shopping cart: 0 items"':
+                - /url: /cart
+  - main [ref=f47e6]
+  - contentinfo [ref=f47e9]:
+    - link "Made by Polymer" [ref=f47e10] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f47e11]: Demo Only

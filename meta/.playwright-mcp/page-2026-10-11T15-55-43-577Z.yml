@@ -1,0 +1,83 @@
+- generic [ref=f72e2]:
+  - text: SHOP
+  - navigation [ref=f72e3]:
+    - generic [ref=f72e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f72e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic [ref=f72e6]:
+              - link [ref=f72e7] [cursor=pointer]:
+                - /url: /cart
+                - 'button "Shopping cart: 3 items" [ref=f72e8]'
+              - generic [aria-hidden]: "3"
+  - main [ref=f72e10]:
+    - generic [ref=f72e13]:
+      - generic [ref=f72e14]:
+        - heading "Your Cart" [level=1] [ref=f72e15]
+        - text: (2 items)
+      - generic [ref=f72e16]:
+        - generic [ref=f72e17]:
+          - link [ref=f72e18] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+            - img "Android Ringspun T-Shirt - Green" [ref=f72e20]
+          - generic [ref=f72e21]:
+            - link "Android Ringspun T-Shirt - Green" [ref=f72e23] [cursor=pointer]:
+              - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+            - generic [ref=f72e24]:
+              - generic [ref=f72e26]:
+                - generic: "Qty:"
+                - combobox "Change quantity" [ref=f72e27]:
+                  - option "1"
+                  - option "2" [selected]
+                  - option "3"
+                  - option "4"
+                  - option "5"
+                  - option "6"
+                  - option "7"
+                  - option "8"
+                  - option "9"
+                  - option "10"
+                  - option "11"
+                  - option "12"
+                - generic [aria-hidden] [ref=f72e28]: ▼
+              - generic [ref=f72e29]: "Size: L"
+              - generic [ref=f72e30]: $8.75
+              - button "Delete item Android Ringspun T-Shirt - Green" [ref=f72e31] [cursor=pointer]
+        - generic [ref=f72e33]:
+          - link [ref=f72e34] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/G+Logo+White+T-Shirt
+            - img "G Logo White T-Shirt" [ref=f72e36]
+          - generic [ref=f72e37]:
+            - link "G Logo White T-Shirt" [ref=f72e39] [cursor=pointer]:
+              - /url: /detail/mens_tshirts/G+Logo+White+T-Shirt
+            - generic [ref=f72e40]:
+              - generic [ref=f72e42]:
+                - generic: "Qty:"
+                - combobox "Change quantity" [ref=f72e43]:
+                  - option "1" [selected]
+                  - option "2"
+                  - option "3"
+                  - option "4"
+                  - option "5"
+                  - option "6"
+                  - option "7"
+                  - option "8"
+                  - option "9"
+                  - option "10"
+                  - option "11"
+                  - option "12"
+                - generic [aria-hidden] [ref=f72e44]: ▼
+              - generic [ref=f72e45]: "Size: S"
+              - generic [ref=f72e46]: $13.00
+              - button "Delete item G Logo White T-Shirt" [ref=f72e47] [cursor=pointer]
+      - generic [ref=f72e49]:
+        - text: "Total: $30.50"
+        - link "Checkout" [ref=f72e51] [cursor=pointer]:
+          - /url: /checkout
+  - contentinfo [ref=f72e52]:
+    - link "Made by Polymer" [ref=f72e53] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f72e54]: Demo Only

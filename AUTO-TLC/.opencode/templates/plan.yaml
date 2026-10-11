@@ -1,0 +1,73 @@
+plan_id: "{{YYYYMMDD}}-{app}-{short-name}"
+objective: "{{objetivo del usuario en una frase}}"
+application: "{{ApplicationName PascalCase}}"
+environment: "{{dev|qa|staging|uat|prod}}"
+stack: "{{Playwright-TS}}"
+version: "1.0"
+status: in_progress
+approval: { granted: false, granted_at: null, approved_by: null }
+
+phases:
+  - id: phase-1-intake
+    name: "Recopilacion de requisitos y seleccion de stack"
+    skill: auto-tlc-intake
+    status: pending          # pending | in_progress | completed | blocked
+    wave: 1
+    output: "scope.md"
+    depends_on: []
+
+  - id: phase-2-diagnostics
+    name: "Diagnostico tecnico"
+    skill: auto-tlc-diagnostics
+    status: pending
+    wave: 2
+    output: "diagnostics.md"
+    readiness_score: null
+    blocking_issues: []
+    depends_on: [phase-1-intake]
+
+  - id: phase-3-procedure-plan
+    name: "Plan de procedimiento"
+    skill: auto-tlc-procedure-plan
+    status: pending
+    wave: 3
+    output: "procedure-plan.md"
+    total_scenarios: null
+    depends_on: [phase-2-diagnostics]
+
+  - id: phase-4-test-plan
+    name: "Plan de pruebas formal"
+    skill: auto-tlc-test-plan
+    status: pending
+    wave: 4
+    output: "automation-test-plan.md"
+    awaiting_approval: true
+    depends_on: [phase-3-procedure-plan]
+
+  - id: approval-gate
+    name: "Approval Gate — confirmacion explicita del usuario"
+    status: pending
+    wave: 5
+    blocks: phase-5-execution
+    depends_on: [phase-4-test-plan]
+
+  - id: phase-5-execution
+    name: "Generacion y ejecucion"
+    skill: auto-tlc-execution
+    status: pending
+    wave: 6
+    output: "selectors.md"
+    code_path: "tests/{app}/{env}/{stack}/{project}/"
+    depends_on: [approval-gate]
+
+  - id: phase-6-analysis
+    name: "Analisis de resultados"
+    skill: auto-tlc-analysis
+    status: pending
+    wave: 7
+    output: "reports/reports_{stamp}_iter{N}/"
+    verdict: null              # PASSED | CONDITIONAL | FAILED
+    depends_on: [phase-5-execution]
+
+history:
+  - { wave: 0, event: "plan_created", detail: "init" }

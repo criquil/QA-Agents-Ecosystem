@@ -1,0 +1,59 @@
+- generic [ref=f65e2]:
+  - text: SHOP
+  - navigation [ref=f65e3]:
+    - generic [ref=f65e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link [ref=f65e6] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+              - button "Go back" [ref=f65e7]
+            - link "SHOP Home" [ref=f65e9] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f65e11] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f65e12]'
+        - generic [ref=f65e16]:
+          - generic:
+            - link "Men's Outerwear" [ref=f65e19] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f65e22] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f65e25] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f65e28] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f65e29]:
+    - generic [ref=f65e31]:
+      - img "YouTube Organic Cotton T-Shirt - Grey" [ref=f65e33]
+      - generic [ref=f65e34]:
+        - heading "YouTube Organic Cotton T-Shirt - Grey" [level=1] [ref=f65e35]
+        - generic [ref=f65e36]: $14.75
+        - generic [ref=f65e37]:
+          - generic [ref=f65e38]:
+            - generic: Size
+            - combobox "Size" [ref=f65e39]:
+              - option "XS"
+              - option "S"
+              - option "M" [selected]
+              - option "L"
+              - option "XL"
+            - generic [aria-hidden] [ref=f65e40]: ▼
+          - generic [ref=f65e41]:
+            - generic: Quantity
+            - combobox "Quantity" [ref=f65e42]:
+              - option "1" [selected]
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+            - generic [aria-hidden] [ref=f65e43]: ▼
+        - generic [ref=f65e44]:
+          - heading "Description" [level=2] [ref=f65e45]
+          - paragraph [ref=f65e46]: Stay casual and cool in this 100% organic pre-shrunk cotton T-shirt. Available in charcoal grey with full-color YouTube logo screened on front.
+        - button "Add this item to cart" [ref=f65e48]: Add to Cart
+  - contentinfo [ref=f65e49]:
+    - link "Made by Polymer" [ref=f65e50] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f65e51]: Demo Only

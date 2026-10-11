@@ -1,0 +1,31 @@
+plan_id: "20261010-coe-template"
+objective: "Plantilla de plan de gobernanza QA — reemplazar con el objetivo real"
+discipline: "process-quality"
+complexity: LOW
+status: "pending"
+created: "2026-10-10"
+
+phases:
+  - id: phase-1-diagnostico
+    skill: maru-process-quality
+    status: pending
+    wave: 1
+
+  - id: phase-2-plan
+    skill: maru-audits-reviews
+    status: pending
+    wave: 2
+    depends_on: [phase-1-diagnostico]
+
+  - id: phase-3-mejora
+    skill: maru-audits-reviews
+    status: pending
+    wave: 3
+    depends_on: [phase-2-plan]
+    requires_approval: true
+
+  - id: phase-4-verificacion
+    skill: maru-process-quality
+    status: pending
+    wave: 4
+    depends_on: [phase-3-mejora]

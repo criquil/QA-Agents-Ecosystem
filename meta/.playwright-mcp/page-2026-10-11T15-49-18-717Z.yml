@@ -1,0 +1,67 @@
+- generic [ref=f42e2]:
+  - text: SHOP
+  - navigation [ref=f42e3]:
+    - generic [ref=f42e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link [ref=f42e316] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+              - button "Go back" [ref=f42e317]
+            - link "SHOP Home" [ref=f42e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f42e268] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f42e269]'
+        - generic [ref=f42e272]:
+          - generic:
+            - link "Men's Outerwear" [ref=f42e275] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f42e278] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f42e281] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f42e284] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f42e7]:
+    - generic [ref=f42e320]:
+      - img "Android Ringspun T-Shirt - Green" [ref=f42e322]
+      - generic [ref=f42e323]:
+        - heading "Android Ringspun T-Shirt - Green" [level=1] [ref=f42e324]
+        - generic [ref=f42e325]: $8.75
+        - generic [ref=f42e326]:
+          - generic [ref=f42e327]:
+            - generic: Size
+            - combobox "Size" [ref=f42e328]:
+              - option "XS"
+              - option "S"
+              - option "M"
+              - option "L" [selected]
+              - option "XL"
+            - generic [aria-hidden] [ref=f42e329]: ▼
+          - generic [ref=f42e330]:
+            - generic: Quantity
+            - combobox "Quantity" [ref=f42e331]:
+              - option "1" [selected]
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+            - generic [aria-hidden] [ref=f42e332]: ▼
+        - generic [ref=f42e333]:
+          - heading "Description" [level=2] [ref=f42e334]
+          - paragraph [ref=f42e335]:
+            - text: Display your undying love for Androids everywhere in this 100% certified organic ringspun cotton tee.
+            - generic [ref=f42e337]: "Additional Features:"
+            - list [ref=f42e339]:
+              - listitem [ref=f42e340]: 100% combed, ring-spun cotton.
+              - listitem [ref=f42e341]: Preshrunk for fashion fit.
+              - listitem [ref=f42e342]: Tearaway label.
+              - listitem [ref=f42e343]: Available in heather green with the full color Android robot screen printed across center chest.
+        - button "Add this item to cart" [ref=f42e345]: Add to Cart
+  - contentinfo [ref=f42e264]:
+    - link "Made by Polymer" [ref=f42e265] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f42e266]: Demo Only
+  - generic: Android Ringspun T-Shirt - Green, loaded

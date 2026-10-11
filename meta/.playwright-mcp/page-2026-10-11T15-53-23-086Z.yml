@@ -1,0 +1,168 @@
+- generic [ref=f60e2]:
+  - text: SHOP
+  - navigation [ref=f60e3]:
+    - generic [ref=f60e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f60e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f60e7] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f60e8]'
+        - generic [ref=f60e12]:
+          - generic:
+            - link "Men's Outerwear" [ref=f60e15] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f60e18] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f60e21] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f60e24] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f60e25]:
+    - generic [ref=f60e58]:
+      - img "Ladies T-Shirts" [ref=f60e60]
+      - generic [ref=f60e61]:
+        - heading "Ladies T-Shirts" [level=1] [ref=f60e62]
+        - text: (19 items)
+      - list [ref=f60e63]:
+        - listitem [ref=f60e64]:
+          - link "Ladies Chrome T-Shirt Ladies Chrome T-Shirt $13.30" [ref=f60e65] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Chrome+T-Shirt
+            - generic [ref=f60e66]:
+              - img "Ladies Chrome T-Shirt" [ref=f60e68]
+              - generic [ref=f60e69]: Ladies Chrome T-Shirt
+              - generic [ref=f60e70]: $13.30
+        - listitem [ref=f60e71]:
+          - link "Ladies Google New York T-Shirt Ladies Google New York T-Shirt $18.35" [ref=f60e72] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Google+New+York+T-Shirt
+            - generic [ref=f60e73]:
+              - img "Ladies Google New York T-Shirt" [ref=f60e75]
+              - generic [ref=f60e76]: Ladies Google New York T-Shirt
+              - generic [ref=f60e77]: $18.35
+        - listitem [ref=f60e78]:
+          - link "Ladies Gmail T-Shirt Ladies Gmail T-Shirt $16.40" [ref=f60e79] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Gmail+T-Shirt
+            - generic [ref=f60e80]:
+              - img "Ladies Gmail T-Shirt" [ref=f60e82]
+              - generic [ref=f60e83]: Ladies Gmail T-Shirt
+              - generic [ref=f60e84]: $16.40
+        - listitem [ref=f60e85]:
+          - link "Ladies G Logo White T-Shirt Ladies G Logo White T-Shirt $13.30" [ref=f60e86] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+G+Logo+White+T-Shirt
+            - generic [ref=f60e87]:
+              - img "Ladies G Logo White T-Shirt" [ref=f60e89]
+              - generic [ref=f60e90]: Ladies G Logo White T-Shirt
+              - generic [ref=f60e91]: $13.30
+        - listitem [ref=f60e92]:
+          - link "Ladies Android Pride T-Shirt Ladies Android Pride T-Shirt $19.10" [ref=f60e93] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Android+Pride+T-Shirt
+            - generic [ref=f60e94]:
+              - img "Ladies Android Pride T-Shirt" [ref=f60e96]
+              - generic [ref=f60e97]: Ladies Android Pride T-Shirt
+              - generic [ref=f60e98]: $19.10
+        - listitem [ref=f60e99]:
+          - link "Ladies Ringspun Crew Neck Ladies Ringspun Crew Neck $19.70" [ref=f60e100] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Ringspun+Crew+Neck
+            - generic [ref=f60e101]:
+              - img "Ladies Ringspun Crew Neck" [ref=f60e103]
+              - generic [ref=f60e104]: Ladies Ringspun Crew Neck
+              - generic [ref=f60e105]: $19.70
+        - listitem [ref=f60e106]:
+          - link "Ladies Tri-Blend V-Neck T-Shirt Ladies Tri-Blend V-Neck T-Shirt $35.10" [ref=f60e107] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Tri-Blend+V-Neck+T-Shirt
+            - generic [ref=f60e108]:
+              - img "Ladies Tri-Blend V-Neck T-Shirt" [ref=f60e110]
+              - generic [ref=f60e111]: Ladies Tri-Blend V-Neck T-Shirt
+              - generic [ref=f60e112]: $35.10
+        - listitem [ref=f60e113]:
+          - link "Bella Ladies Favorite Tee Bella Ladies Favorite Tee $10.50" [ref=f60e114] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Bella+Ladies+Favorite+Tee
+            - generic [ref=f60e115]:
+              - img "Bella Ladies Favorite Tee" [ref=f60e117]
+              - generic [ref=f60e118]: Bella Ladies Favorite Tee
+              - generic [ref=f60e119]: $10.50
+        - listitem [ref=f60e120]:
+          - link "Ladies Bamboo T-Shirt Ladies Bamboo T-Shirt $20.65" [ref=f60e121] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Bamboo+T-Shirt
+            - generic [ref=f60e122]:
+              - img "Ladies Bamboo T-Shirt" [ref=f60e124]
+              - generic [ref=f60e125]: Ladies Bamboo T-Shirt
+              - generic [ref=f60e126]: $20.65
+        - listitem [ref=f60e127]:
+          - link "Ladies L/S Colorblock Raglan Ladies L/S Colorblock Raglan $36.95" [ref=f60e128] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+L+S+Colorblock+Raglan
+            - generic [ref=f60e129]:
+              - img "Ladies L/S Colorblock Raglan" [ref=f60e131]
+              - generic [ref=f60e132]: Ladies L/S Colorblock Raglan
+              - generic [ref=f60e133]: $36.95
+        - listitem [ref=f60e134]:
+          - link "Bella Scoop-Neck Ladies T-Shirt Bella Scoop-Neck Ladies T-Shirt $13.10" [ref=f60e135] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Bella+Scoop-Neck+Ladies+T-Shirt
+            - generic [ref=f60e136]:
+              - img "Bella Scoop-Neck Ladies T-Shirt" [ref=f60e138]
+              - generic [ref=f60e139]: Bella Scoop-Neck Ladies T-Shirt
+              - generic [ref=f60e140]: $13.10
+        - listitem [ref=f60e141]:
+          - link "Ladies Not For Sale T-Shirt Ladies Not For Sale T-Shirt $24.00" [ref=f60e142] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Not+For+Sale+T-Shirt
+            - generic [ref=f60e143]:
+              - img "Ladies Not For Sale T-Shirt" [ref=f60e145]
+              - generic [ref=f60e146]: Ladies Not For Sale T-Shirt
+              - generic [ref=f60e147]: $24.00
+        - listitem [ref=f60e148]:
+          - link "Ladies Android L/S Stretch T-Shirt Ladies Android L/S Stretch T-Shirt $20.00" [ref=f60e149] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Android+L+S+Stretch+T-Shirt
+            - generic [ref=f60e150]:
+              - img "Ladies Android L/S Stretch T-Shirt" [ref=f60e152]
+              - generic [ref=f60e153]: Ladies Android L/S Stretch T-Shirt
+              - generic [ref=f60e154]: $20.00
+        - listitem [ref=f60e155]:
+          - link "Ladies Mountain View T-Shirt Ladies Mountain View T-Shirt $17.50" [ref=f60e156] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Mountain+View+T-Shirt
+            - generic [ref=f60e157]:
+              - img "Ladies Mountain View T-Shirt" [ref=f60e159]
+              - generic [ref=f60e160]: Ladies Mountain View T-Shirt
+              - generic [ref=f60e161]: $17.50
+        - listitem [ref=f60e162]:
+          - link "Ladies Blueprint for a Better Inbox T-Shirt Ladies Blueprint for a Better Inbox T-Shirt $14.30" [ref=f60e163] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Blueprint+for+a+Better+Inbox+T-Shirt
+            - generic [ref=f60e164]:
+              - img "Ladies Blueprint for a Better Inbox T-Shirt" [ref=f60e166]
+              - generic [ref=f60e167]: Ladies Blueprint for a Better Inbox T-Shirt
+              - generic [ref=f60e168]: $14.30
+        - listitem [ref=f60e169]:
+          - link "Ladies Cotton Poly w/ Thermal Tee Ladies Cotton Poly w/ Thermal Tee $15.15" [ref=f60e170] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+Cotton+Poly+w++Thermal+Tee
+            - generic [ref=f60e171]:
+              - img "Ladies Cotton Poly w/ Thermal Tee" [ref=f60e173]
+              - generic [ref=f60e174]: Ladies Cotton Poly w/ Thermal Tee
+              - generic [ref=f60e175]: $15.15
+        - listitem [ref=f60e176]:
+          - link "Ladies YouTube Favorite Tee Ladies YouTube Favorite Tee $11.10" [ref=f60e177] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Ladies+YouTube+Favorite+Tee
+            - generic [ref=f60e178]:
+              - img "Ladies YouTube Favorite Tee" [ref=f60e180]
+              - generic [ref=f60e181]: Ladies YouTube Favorite Tee
+              - generic [ref=f60e182]: $11.10
+        - listitem [ref=f60e183]:
+          - link "MTV Ladies Yellow T-Shirt MTV Ladies Yellow T-Shirt $16.90" [ref=f60e184] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/MTV+Ladies+Yellow+T-Shirt
+            - generic [ref=f60e185]:
+              - img "MTV Ladies Yellow T-Shirt" [ref=f60e187]
+              - generic [ref=f60e188]: MTV Ladies Yellow T-Shirt
+              - generic [ref=f60e189]: $16.90
+        - listitem [ref=f60e190]:
+          - link "Women's Android Heart T-Shirt Women's Android Heart T-Shirt $10.60" [ref=f60e191] [cursor=pointer]:
+            - /url: /detail/ladies_tshirts/Women+s+Android+Heart+T-Shirt
+            - generic [ref=f60e192]:
+              - img "Women's Android Heart T-Shirt" [ref=f60e194]
+              - generic [ref=f60e195]: Women's Android Heart T-Shirt
+              - generic [ref=f60e196]: $10.60
+  - contentinfo [ref=f60e55]:
+    - link "Made by Polymer" [ref=f60e56] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f60e57]: Demo Only
+  - generic: Ladies T-Shirts, loaded

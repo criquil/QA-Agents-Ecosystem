@@ -1,0 +1,77 @@
+- generic [active] [ref=f43e2]:
+  - text: SHOP
+  - navigation [ref=f43e3]:
+    - generic [ref=f43e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link [ref=f43e316] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+              - button "Go back" [ref=f43e317]
+            - link "SHOP Home" [ref=f43e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic [ref=f43e297]:
+              - link [ref=f43e346] [cursor=pointer]:
+                - /url: /cart
+                - 'button "Shopping cart: 3 items" [ref=f43e347]'
+              - generic [aria-hidden]: "3"
+        - generic [ref=f43e302]:
+          - generic:
+            - link "Men's Outerwear" [ref=f43e305] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f43e308] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f43e311] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f43e314] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f43e7]:
+    - generic [ref=f43e320]:
+      - img "G Logo White T-Shirt" [ref=f43e322]
+      - generic [ref=f43e323]:
+        - heading "G Logo White T-Shirt" [level=1] [ref=f43e324]
+        - generic [ref=f43e325]: $13.00
+        - generic [ref=f43e326]:
+          - generic [ref=f43e327]:
+            - generic: Size
+            - combobox "Size" [ref=f43e328]:
+              - option "XS"
+              - option "S" [selected]
+              - option "M"
+              - option "L"
+              - option "XL"
+            - generic [aria-hidden] [ref=f43e329]: ▼
+          - generic [ref=f43e330]:
+            - generic: Quantity
+            - combobox "Quantity" [ref=f43e331]:
+              - option "1" [selected]
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+            - generic [aria-hidden] [ref=f43e332]: ▼
+        - generic [ref=f43e333]:
+          - heading "Description" [level=2] [ref=f43e334]
+          - paragraph [ref=f43e335]:
+            - text: There's a new G in town and it's here to stay. Get your hands on this comfy white tee featuring the new Google icon.
+            - generic [ref=f43e337]: "Features:"
+            - list [ref=f43e339]:
+              - listitem [ref=f43e340]: 100% combed, ringspun cotton.
+              - listitem [ref=f43e341]: Side-seamed.
+              - listitem [ref=f43e342]: Unisex size, retail fit by Bella+Canvas.
+              - listitem [ref=f43e343]: Available in white with the Google 'G' icon screenprinted at front.
+        - button "Add this item to cart" [ref=f43e345]: Add to Cart
+  - contentinfo [ref=f43e294]:
+    - link "Made by Polymer" [ref=f43e295] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f43e296]: Demo Only
+  - generic: Item added to the cart
+  - dialog [ref=f43e348]:
+    - generic [ref=f43e349]: Added to cart
+    - generic [ref=f43e351]:
+      - link "View Cart" [ref=f43e353] [cursor=pointer]:
+        - /url: /cart
+      - link "Checkout" [ref=f43e355] [cursor=pointer]:
+        - /url: /checkout
+    - button "Close dialog" [ref=f43e356] [cursor=pointer]

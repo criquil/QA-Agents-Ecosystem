@@ -1,0 +1,55 @@
+- generic [ref=f45e2]:
+  - text: SHOP
+  - navigation [ref=f45e3]:
+    - generic [ref=f45e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f45e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic [ref=f45e6]:
+              - link [ref=f45e7] [cursor=pointer]:
+                - /url: /cart
+                - 'button "Shopping cart: 3 items" [ref=f45e8]'
+              - generic [aria-hidden]: "3"
+  - main [ref=f45e10]:
+    - generic [ref=f45e13]:
+      - generic [ref=f45e14]:
+        - heading "Your Cart" [level=1] [ref=f45e15]
+        - text: (1 item)
+      - generic [ref=f45e17]:
+        - link [ref=f45e18] [cursor=pointer]:
+          - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+          - img "Android Ringspun T-Shirt - Green" [ref=f45e20]
+        - generic [ref=f45e21]:
+          - link "Android Ringspun T-Shirt - Green" [ref=f45e23] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+          - generic [ref=f45e24]:
+            - generic [ref=f45e26]:
+              - generic: "Qty:"
+              - combobox "Change quantity" [ref=f45e27]:
+                - option "1"
+                - option "2"
+                - option "3" [selected]
+                - option "4"
+                - option "5"
+                - option "6"
+                - option "7"
+                - option "8"
+                - option "9"
+                - option "10"
+                - option "11"
+                - option "12"
+              - generic [aria-hidden] [ref=f45e28]: ▼
+            - generic [ref=f45e29]: "Size: L"
+            - generic [ref=f45e30]: $8.75
+            - button "Delete item Android Ringspun T-Shirt - Green" [ref=f45e31] [cursor=pointer]
+      - generic [ref=f45e33]:
+        - text: "Total: $26.25"
+        - link "Checkout" [ref=f45e35] [cursor=pointer]:
+          - /url: /checkout
+  - contentinfo [ref=f45e36]:
+    - link "Made by Polymer" [ref=f45e37] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f45e38]: Demo Only

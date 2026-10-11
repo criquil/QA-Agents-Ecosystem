@@ -1,0 +1,66 @@
+- generic [ref=f27e2]:
+  - text: SHOP
+  - navigation [ref=f27e3]:
+    - generic [ref=f27e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f27e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic:
+              - 'link "Shopping cart: 0 items"':
+                - /url: /cart
+  - main [ref=f27e7]:
+    - generic [ref=f27e8]:
+      - img "Ladies Outerwear" [ref=f27e10]
+      - generic [ref=f27e11]:
+        - heading "Ladies Outerwear" [level=1] [ref=f27e12]
+        - text: (6 items)
+      - list [ref=f27e13]:
+        - listitem [ref=f27e14]:
+          - link "Ladies Modern Stretch Full Zip Ladies Modern Stretch Full Zip $41.60" [ref=f27e15] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Modern+Stretch+Full+Zip
+            - generic [ref=f27e16]:
+              - img "Ladies Modern Stretch Full Zip" [ref=f27e18]
+              - generic [ref=f27e19]: Ladies Modern Stretch Full Zip
+              - generic [ref=f27e20]: $41.60
+        - listitem [ref=f27e21]:
+          - link "Ladies Colorblock Wind Jacket Ladies Colorblock Wind Jacket $45.90" [ref=f27e22] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Colorblock+Wind+Jacket
+            - generic [ref=f27e23]:
+              - img "Ladies Colorblock Wind Jacket" [ref=f27e25]
+              - generic [ref=f27e26]: Ladies Colorblock Wind Jacket
+              - generic [ref=f27e27]: $45.90
+        - listitem [ref=f27e28]:
+          - link "Ladies Voyage Fleece Jacket Ladies Voyage Fleece Jacket $48.00" [ref=f27e29] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Voyage+Fleece+Jacket
+            - generic [ref=f27e30]:
+              - img "Ladies Voyage Fleece Jacket" [ref=f27e32]
+              - generic [ref=f27e33]: Ladies Voyage Fleece Jacket
+              - generic [ref=f27e34]: $48.00
+        - listitem [ref=f27e35]:
+          - link "Ladies Pullover L/S Hood Ladies Pullover L/S Hood $36.50" [ref=f27e36] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Pullover+L+S+Hood
+            - generic [ref=f27e37]:
+              - img "Ladies Pullover L/S Hood" [ref=f27e39]
+              - generic [ref=f27e40]: Ladies Pullover L/S Hood
+              - generic [ref=f27e41]: $36.50
+        - listitem [ref=f27e42]:
+          - link "Ladies Sonoma Hybrid Knit Jacket Ladies Sonoma Hybrid Knit Jacket $84.85" [ref=f27e43] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Sonoma+Hybrid+Knit+Jacket
+            - generic [ref=f27e44]:
+              - img "Ladies Sonoma Hybrid Knit Jacket" [ref=f27e46]
+              - generic [ref=f27e47]: Ladies Sonoma Hybrid Knit Jacket
+              - generic [ref=f27e48]: $84.85
+        - listitem [ref=f27e49]:
+          - link "Ladies Yerba Knit Quarter Zip Ladies Yerba Knit Quarter Zip $64.20" [ref=f27e50] [cursor=pointer]:
+            - /url: /detail/ladies_outerwear/Ladies+Yerba+Knit+Quarter+Zip
+            - generic [ref=f27e51]:
+              - img "Ladies Yerba Knit Quarter Zip" [ref=f27e53]
+              - generic [ref=f27e54]: Ladies Yerba Knit Quarter Zip
+              - generic [ref=f27e55]: $64.20
+  - contentinfo [ref=f27e56]:
+    - link "Made by Polymer" [ref=f27e57] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f27e58]: Demo Only

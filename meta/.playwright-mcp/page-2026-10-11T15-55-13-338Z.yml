@@ -1,0 +1,58 @@
+- generic [ref=f70e2]:
+  - text: SHOP
+  - navigation [ref=f70e3]:
+    - generic [ref=f70e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=f70e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic [ref=f70e6]:
+              - link [ref=f70e346] [cursor=pointer]:
+                - /url: /cart
+                - 'button "Shopping cart: 2 items" [ref=f70e347]'
+              - generic [aria-hidden]: "2"
+  - main [ref=f70e25]:
+    - generic:
+      - text: ▼ ▼
+      - generic [ref=f70e360]:
+        - generic [ref=f70e361]:
+          - heading "Your Cart" [level=1] [ref=f70e362]
+          - text: (1 item)
+        - generic [ref=f70e364]:
+          - link [ref=f70e365] [cursor=pointer]:
+            - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+            - img "Android Ringspun T-Shirt - Green" [ref=f70e367]
+          - generic [ref=f70e368]:
+            - link "Android Ringspun T-Shirt - Green" [ref=f70e370] [cursor=pointer]:
+              - /url: /detail/mens_tshirts/Android+Ringspun+T-Shirt+-+Green
+            - generic [ref=f70e371]:
+              - generic [ref=f70e373]:
+                - generic: "Qty:"
+                - combobox "Change quantity" [ref=f70e374]:
+                  - option "1"
+                  - option "2" [selected]
+                  - option "3"
+                  - option "4"
+                  - option "5"
+                  - option "6"
+                  - option "7"
+                  - option "8"
+                  - option "9"
+                  - option "10"
+                  - option "11"
+                  - option "12"
+                - generic [aria-hidden] [ref=f70e375]: ▼
+              - generic [ref=f70e376]: "Size: L"
+              - generic [ref=f70e377]: $8.75
+              - button "Delete item Android Ringspun T-Shirt - Green" [ref=f70e378] [cursor=pointer]
+        - generic [ref=f70e380]:
+          - text: "Total: $17.50"
+          - link "Checkout" [ref=f70e382] [cursor=pointer]:
+            - /url: /checkout
+  - contentinfo [ref=f70e156]:
+    - link "Made by Polymer" [ref=f70e157] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f70e158]: Demo Only
+  - generic: Your cart, loaded

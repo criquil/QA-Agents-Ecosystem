@@ -1,0 +1,52 @@
+- generic [ref=e2]:
+  - text: SHOP
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link "SHOP Home" [ref=e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - generic:
+              - 'link "Shopping cart: 0 items"':
+                - /url: /cart
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - link [ref=e10] [cursor=pointer]:
+          - /url: /list/mens_outerwear
+          - img "Men's Outerwear" [ref=e12]
+        - heading "Men's Outerwear" [level=2] [ref=e13]
+        - link "Men's Outerwear Shop Now" [ref=e15] [cursor=pointer]:
+          - /url: /list/mens_outerwear
+          - text: Shop Now
+      - generic [ref=e16]:
+        - link [ref=e17] [cursor=pointer]:
+          - /url: /list/ladies_outerwear
+          - img "Ladies Outerwear" [ref=e19]
+        - heading "Ladies Outerwear" [level=2] [ref=e20]
+        - link "Ladies Outerwear Shop Now" [ref=e22] [cursor=pointer]:
+          - /url: /list/ladies_outerwear
+          - text: Shop Now
+      - generic [ref=e23]:
+        - link [ref=e24] [cursor=pointer]:
+          - /url: /list/mens_tshirts
+          - img "Men's T-Shirts" [ref=e26]
+        - heading "Men's T-Shirts" [level=2] [ref=e27]
+        - link "Men's T-Shirts Shop Now" [ref=e29] [cursor=pointer]:
+          - /url: /list/mens_tshirts
+          - text: Shop Now
+      - generic [ref=e30]:
+        - link [ref=e31] [cursor=pointer]:
+          - /url: /list/ladies_tshirts
+          - img "Ladies T-Shirts" [ref=e33]
+        - heading "Ladies T-Shirts" [level=2] [ref=e34]
+        - link "Ladies T-Shirts Shop Now" [ref=e36] [cursor=pointer]:
+          - /url: /list/ladies_tshirts
+          - text: Shop Now
+  - contentinfo [ref=e37]:
+    - link "Made by Polymer" [ref=e38] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=e39]: Demo Only
+  - generic: Home, loaded

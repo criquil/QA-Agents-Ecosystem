@@ -1,0 +1,31 @@
+# Roadmap de Adopción de Estándares
+
+## Fase 1 — Fundamentos (mes 1-2)
+- [ ] Publicar políticas de calidad base
+- [ ] Definir catálogo de NFRs y KPIs
+- [ ] Mapear requisitos ISO/IEC 25010 + WCAG AA
+- [ ] Capacitación: ISO/IEC 25010, Shift-Left
+
+## Fase 2 — Disciplinas Core (mes 3-4)
+- [ ] Estandarizar automation testing (Playwright/Cypress)
+- [ ] Estandarizar contract testing (Pact)
+- [ ] Line base de coverage: 70% unit, 80% funcional
+- [ ] Integrar quality gates en CI/CD
+
+## Fase 3 — Performance y Accesibilidad (mes 5-6)
+- [ ] Definir SLAs/SLOs por sistema crítico
+- [ ] Performance gates en CI (k6, JMeter)
+- [ ] Auditoría WCAG AA + VPAT público
+- [ ] Pruebas con usuarios reales (discapacidad)
+
+## Fase 4 — Madurez (mes 7-12)
+- [ ] Automatizar reportes de auditoría
+- [ ] Dashboard de métricas en tiempo real (SonarQube)
+- [ ] Proceso de mejora continua CAPA
+- [ ] Preparación para certificación (ISTQB/CMMI)
+
+## Reglas
+
+- Cada item tiene owner asignado y fecha de target.
+- Revisión trimestral con leads de QA.
+- Items bloqueados → escalar en retrospectiva.

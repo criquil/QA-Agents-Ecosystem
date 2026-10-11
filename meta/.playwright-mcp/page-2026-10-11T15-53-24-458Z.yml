@@ -1,0 +1,67 @@
+- generic [ref=f60e2]:
+  - text: SHOP
+  - navigation [ref=f60e3]:
+    - generic [ref=f60e4]:
+      - generic:
+        - generic:
+          - generic:
+            - link [ref=f60e198] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+              - button "Go back" [ref=f60e199]
+            - link "SHOP Home" [ref=f60e5] [cursor=pointer]:
+              - /url: /
+              - text: SHOP
+            - link [ref=f60e7] [cursor=pointer]:
+              - /url: /cart
+              - 'button "Shopping cart: 0 items" [ref=f60e8]'
+        - generic [ref=f60e12]:
+          - generic:
+            - link "Men's Outerwear" [ref=f60e15] [cursor=pointer]:
+              - /url: /list/mens_outerwear
+            - link "Ladies Outerwear" [ref=f60e18] [cursor=pointer]:
+              - /url: /list/ladies_outerwear
+            - link "Men's T-Shirts" [ref=f60e21] [cursor=pointer]:
+              - /url: /list/mens_tshirts
+            - link "Ladies T-Shirts" [ref=f60e24] [cursor=pointer]:
+              - /url: /list/ladies_tshirts
+  - main [ref=f60e25]:
+    - generic [ref=f60e202]:
+      - img "Ladies Chrome T-Shirt" [ref=f60e204]
+      - generic [ref=f60e205]:
+        - heading "Ladies Chrome T-Shirt" [level=1] [ref=f60e206]
+        - generic [ref=f60e207]: $13.30
+        - generic [ref=f60e208]:
+          - generic [ref=f60e209]:
+            - generic: Size
+            - combobox "Size" [ref=f60e210]:
+              - option "XS"
+              - option "S"
+              - option "M" [selected]
+              - option "L"
+              - option "XL"
+            - generic [aria-hidden] [ref=f60e211]: ▼
+          - generic [ref=f60e212]:
+            - generic: Quantity
+            - combobox "Quantity" [ref=f60e213]:
+              - option "1" [selected]
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+            - generic [aria-hidden] [ref=f60e214]: ▼
+        - generic [ref=f60e215]:
+          - heading "Description" [level=2] [ref=f60e216]
+          - paragraph [ref=f60e217]:
+            - text: The best of three fabrics combined into one seductively-soft tee.
+            - generic [ref=f60e219]: "Features:"
+            - list [ref=f60e221]:
+              - listitem [ref=f60e222]: 50% polyester, 25% combed and ring-spun cotton, 25% rayon.
+              - listitem [ref=f60e223]: Side-seamed.
+              - listitem [ref=f60e224]: Semi-relaxed fit.
+              - listitem [ref=f60e225]: Available in heather blue with the white Google Chrome logo screenprinted at center chest.
+        - button "Add this item to cart" [ref=f60e227]: Add to Cart
+  - contentinfo [ref=f60e55]:
+    - link "Made by Polymer" [ref=f60e56] [cursor=pointer]:
+      - /url: https://www.polymer-project.org/3.0/toolbox/
+    - generic [ref=f60e57]: Demo Only
+  - generic: Ladies Chrome T-Shirt, loaded
