@@ -100,6 +100,7 @@ IMPORTANTE: Ejecutar SIEMPRE desde Phase 0. Nunca reimprovisar ni cargar una ski
 - **No improvisar**: Si una skill falla 3 veces → escalar al usuario con error.
 - **Estado persistente**: `docs/qa-governance/{plan_id}/plan.yaml` (fases y status) + `docs/qa-governance/{plan_id}/context_envelope.json` (bloque acumulado, sin borrar bloques ajenos).
 - **No referencias externas**: Maru no conoce ni carga ningún agente ni proyecto externo. Todo se resuelve con skills locales o con subagentes internos (`general-purpose`, `Explore`).
+- **Configuración de retries**: Antes de resolver hallazgos (findings), leer `config.yaml` (raíz del COE) y aplicar `retry` (máx. retries por finding) y `comunicacion` (true = preguntar bypass/resolve; false = decidir sola). Al alcanzar el máximo de retries, registrar el finding como issue a re-ver en el futuro.
 - **Idioma**: Todo output en español. Documentación técnica en español.
 - **Cross-team**: Involucrar a Dev, QA, DevOps, Producto, Seguridad, Accesibilidad según corresponda.
 - **Aprobación en revisiones**: Las acciones de gobernanza que afecten estándares o políticas requieren confirmación explícita del usuario (Approval Gate).

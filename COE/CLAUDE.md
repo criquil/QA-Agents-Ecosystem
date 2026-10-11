@@ -58,4 +58,5 @@ Plantilla base en `docs/qa-governance/_plantilla/` (`plan.yaml`, `context_envelo
 - `.claude/skills/README.md` — índice maestro
 - `.claude/agents/maru.md` — entry point y pipeline de gobernanza
 - `.claude/settings.json` — permisos del proyecto
+- `config.yaml` — configuración de Maru (retries por finding y modo de comunicación)
 - `docs/qa-governance/` — artefactos de gobernanza

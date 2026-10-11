@@ -1,0 +1,32 @@
+# ============================================================
+# Configuración de Maru — COE
+# Comportamiento de resolución de findings en revisiones (reviews)
+# ============================================================
+
+config:
+  # Número máximo de retries por finding en las revisiones de Maru.
+  # Cada re-entrega de un finding cuenta un retry adicional.
+  retry: 1
+
+  # Comunicación: true | false
+  #   true  -> Maru pregunta qué hacer con cada finding:
+  #              - "bypass": dejar el finding para re-revisión futura.
+  #              - "resolve": resolver de inmediato (atado al contador de retries).
+  #   false -> Maru decide por sí misma (sin preguntar) hasta agotar el número máximo de retries.
+  comunicacion: true
+
+# ============================================================
+# Regla de retries (aplica en ambos modos)
+# ============================================================
+#
+# - Mientras el contador de retries de un finding sea menor que `retry`,
+#   Maru puede re-ver/re-resolver el finding.
+# - Al alcanzar `retry` (el máximo), el finding NO se vuelve a resolver:
+#   se registra como issue "a re-ver en el futuro" (bypass automático)
+#   y queda fuera del ciclo activo de retries.
+#
+# - `comunicacion: true`  -> en cada retry, Maru consulta al usuario:
+#     · "bypass"  (pasa a re-revisión futura, sin consumir más retries), o
+#     · "resolve" (resuelve ahora y consume un retry).
+# - `comunicacion: false` -> Maru decide sola en cada retry hasta el máximo;
+#     al llegar a `retry`, guarda el finding como issue a re-ver en el futuro.
