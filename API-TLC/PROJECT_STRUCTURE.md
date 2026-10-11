@@ -148,4 +148,4 @@ tests/
 
 ---
 
-**Nota**: Esta estructura es la versión 3.0 del Performance Test Life Cycle (PTLC) y se alinea con las convenciones definidas en `AGENTS.md`.
+**Nota**: Esta estructura es la versión 3.0 del Performance Test Life Cycle (PTLC) y se alinea con las convenciones definidas en `CLAUDE.md`.

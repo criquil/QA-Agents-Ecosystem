@@ -4,9 +4,9 @@
 
 ```text
 /
-├── AGENTS.md                  # Guía persistente para agentes (reglas, tokens, entregables)
-├── opencode.json              # default_agent: ptlc-orchestrator
-├── .opencode/
+├── CLAUDE.md                  # Guía persistente para agentes (reglas, tokens, entregables)
+├── .claude/agents/ptlc-orchestrator.md  # entry point y pipeline
+├── .claude/
 │   ├── agents/
 │   │   └── ptlc-orchestrator.md   # Único agente: entry point + orquestador
 │   └── skills/                    # Knowledge base PTLC (18 skills)
@@ -21,7 +21,7 @@
 │       ├── ptlc-metricas-kpis/ ptlc-workload-modeling/ ptlc-monitoreo/
 │       ├── ptlc-scripting/ ptlc-analisis-bottlenecks/ ptlc-mejores-practicas/
 │       ├── ptlc-herramientas/     # Guías k6, JMeter, Gatling, Locust + comparativa
-│       ├── ptlc-arquitectura-mapas/   # MAP.md (diagramas) + AGENTS.md (convenciones)
+│       ├── ptlc-arquitectura-mapas/   # MAP.md (diagramas) + CLAUDE.md (convenciones)
 │       └── ptlc-roadmap-decisiones/   # PRD.yaml + CONTEXT_ENVELOPE.md
 ├── docs/                      # Esta documentación + entregables por ciclo
 │   └── plan/{plan_id}/        # plan.yaml + context_envelope.json (estado activo)
@@ -39,7 +39,7 @@ Cada skill temática sigue `SKILL.md` (índice, Nivel 2) + `NN_Tema.md` (detalle
 | `ptlc-orchestrator` | Detecta dominio (Phase 0), planifica (plan.yaml + envelope), carga una skill por fase, persiste estado, comunica progreso |
 | Skills pipeline (6) | Procedimiento autoritativo de cada fase: lecturas obligatorias, workflow, formato de salida |
 | Skills conocimiento (12) | Fuente de verdad temática; nunca ejecutan el ciclo por sí solas |
-| Subagentes `general` / `explore` | Resuelven requests no-PTLC (multi-paso / exploración del repo) |
+| Subagentes `general-purpose` / `Explore` | Resuelven requests no-PTLC (multi-paso / exploración del repo) |
 | `plan.yaml` + `context_envelope.json` | Estado resumible del ciclo; evita releer documentos ya sintetizados |
 | `measure_tokens.py` | Valida: activo ≤1.400, agente ≤3.200, `SKILL.md` ≤2.000, detalle ≤6.000 tokens |
 
@@ -61,15 +61,15 @@ flowchart TD
     SUB --> OUT2(["codigo, docs, tests"])
 ```
 
-## Mapa de carpetas `.opencode/skills`
+## Mapa de carpetas `.claude/skills`
 
 ```mermaid
 graph TD
-    SKILLS[".opencode/skills/"] --> PIPE["Pipeline (6)<br/>intake, diagnostics, procedure-plan<br/>test-plan, execution, analysis"]
+    SKILLS[".claude/skills/"] --> PIPE["Pipeline (6)<br/>intake, diagnostics, procedure-plan<br/>test-plan, execution, analysis"]
     SKILLS --> KNOW["Conocimiento (9)<br/>fundamentos, tipos-de-pruebas, fases-del-ciclo<br/>metricas-kpis, workload-modeling, monitoreo<br/>scripting, analisis-bottlenecks, mejores-practicas"]
     SKILLS --> TOOLS["Herramientas (1)<br/>ptlc-herramientas: k6, JMeter<br/>Gatling, Locust, comparativa"]
     SKILLS --> GOV["Gobierno (2)<br/>arquitectura-mapas, roadmap-decisiones"]
     SKILLS --> IDX["README.md<br/>indice maestro"]
 ```
 
-Detalle completo en [MAP.md](../.opencode/skills/ptlc-arquitectura-mapas/MAP.md). Agente en [03](03-agente-orquestador.md).
+Detalle completo en [MAP.md](../.claude/skills/ptlc-arquitectura-mapas/MAP.md). Agente en [03](03-agente-orquestador.md).

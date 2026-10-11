@@ -43,9 +43,9 @@ Un **orquestador** (`Coordi`) coordina **4 agentes operativos** que cubren las �
 |---|---|
 | Nombre friendly | **Coordi** |
 | Nombre técnico | `test-lead-orchestrator` |
-| Ubicación | `C:\Users\crisq\Repo\meta` |
-| Archivo | `.opencode/agents/test-lead-orchestrator.md` |
-| Config | `opencode.json` → `"default_agent": "test-lead-orchestrator"` |
+| Ubicación | `meta/` (este repo) |
+| Archivo | `.claude/agents/test-lead-orchestrator.md` |
+| Entry point | Declarado en `CLAUDE.md`; invocable como `@agent-test-lead-orchestrator` |
 
 **Responsabilidades**:
 - Entry point único de todo request del usuario.
@@ -87,9 +87,9 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 #### PERFIE — Performance Test (`ptlc-orchestrator`)
 
 - **Área**: Performance / Load Testing.
-- **Repo**: `C:\Users\crisq\Repo\Intelligent_Performance_Test_Orchstrator`
-- **Entry point**: `opencode.json` → `default_agent: ptlc-orchestrator`
-- **Conocimiento**: `.opencode/skills/` — índice maestro en `.opencode/skills/README.md`
+- **Repo**: `../Intelligent_Performance_Test_Orchstrator`
+- **Entry point**: `.claude/agents/ptlc-orchestrator.md`
+- **Conocimiento**: `.claude/skills/` — índice maestro en `.claude/skills/README.md`
 - **Ciclo de 6 fases** (orden estricto):
   1. `ptlc-intake` — Requisitos + selección de herramienta
   2. `ptlc-diagnostics` — Diagnóstico técnico + readiness
@@ -105,8 +105,8 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 #### APU — API Test (`api-tlc-orchestrator-api`)
 
 - **Área**: API Testing.
-- **Repo**: `C:\Users\crisq\Repo\API-TLC`
-- **Entry point**: `opencode.json` → `default_agent: API-TLC-orchestrator-api`
+- **Repo**: `../API-TLC`
+- **Entry point**: `.claude/agents/api-tlc-orchestrator-api.md`
 - **Ciclo de 6 fases** (orden estricto):
   1. `api-tlc-intake-api` — Requisitos + selección de herramienta (single-tool)
   2. `api-tlc-diagnostics-api` — Diagnóstico técnico + readiness
@@ -124,7 +124,7 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 #### MANU — Manual Test (`manual-tlc-orchestrator-manual`)
 
 - **Área**: Manual / Exploratory / UAT / Usability / Accessibility Testing.
-- **Repo**: `C:\Users\crisq\Repo\MANUAL-TLC`
+- **Repo**: `../MANUAL-TLC`
 - **Herramienta de soporte única**: **Playwright MCP Server** (navegación real + captura de evidencia).
 - **Ciclo de 6 fases** (orden estricto):
   1. `manual-tlc-intake-manual` — Requisitos + selección de herramienta
@@ -143,8 +143,8 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 
 - **Área**: Automation QA / UI Automation Testing.
 - **Identidad**: **Scripto**, el "GPS de la automatización de pruebas".
-- **Repo**: `C:\Users\crisq\Repo\AUTO-TLC`
-- **Entry point**: `AGENTS.md` (obligatorio) → agente `.opencode/agents/automation-qa-orchestrator.md`
+- **Repo**: `../AUTO-TLC`
+- **Entry point**: `CLAUDE.md` (obligatorio) → agente `.claude/agents/automation-qa-orchestrator.md`
 - **Idioma**: español, términos técnicos en inglés.
 
 **Reglas obligatorias** (críticas):
@@ -199,11 +199,11 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 | Campo | Valor |
 |---|---|
 | Nombre friendly | **Maru** |
-| Nombre técnico (agente) | `maru` (router en `meta/opencode.json`; canónico en `../COE/.opencode/agents/maru.md`) |
+| Nombre técnico (agente) | `maru` (router en `meta/.claude/settings.json`; canónico en `../COE/.claude/agents/maru.md`) |
 | Contrato | `meta/docs/governance/coe-reviewer.md` — **documento, no agente** |
 | Tipo | **Reviewer** — no es agente operativo |
 
-> **Por qué el contrato no está en `.opencode/agents/`:** OpenCode registra *todo* `.md` dentro de esa carpeta como agente ejecutable y visible en el selector. Un contrato de revisión es documentación; dejarlo ahí creaba un segundo agente COE (`coe-reviewer`) compitiendo con `maru` y degradado — con las mismas skills de gobernanza pero sin instrucción de cargar la definición canónica del COE.
+> **Por qué el contrato no está en `.claude/agents/`:** Claude Code registra *todo* `.md` dentro de esa carpeta como agente ejecutable y visible en el selector. Un contrato de revisión es documentación; dejarlo ahí creaba un segundo agente COE (`coe-reviewer`) compitiendo con `maru` y degradado — con las mismas skills de gobernanza pero sin instrucción de cargar la definición canónica del COE.
 
 **Responsabilidades** (tres funciones, todas de gobernanza):
 
@@ -241,7 +241,7 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 
 ---
 
-## 5. Skills Nuevas (en `meta/.opencode/skills/`)
+## 5. Skills Nuevas (en `meta/.claude/skills/`)
 
 | Skill | Función |
 |---|---|
@@ -255,15 +255,15 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 
 ## 6. Secuencia de Implementación
 
-1. `meta/opencode.json` → `default_agent: test-lead-orchestrator`
-2. `meta/AGENTS.md` → guía persistente del ecosistema
-3. `meta/.opencode/agents/test-lead-orchestrator.md` → identidad y workflow de `Coordi`
+1. `meta/.claude/settings.json` → permisos y acceso a los repos hermanos
+2. `meta/CLAUDE.md` → guía persistente del ecosistema
+3. `meta/.claude/agents/test-lead-orchestrator.md` → identidad y workflow de `Coordi`
 4. `meta/docs/governance/coe-reviewer.md` → contrato de revisión que `Coordi` aplica a `Maru`
-5. `meta/.opencode/skills/test-lead-delegation/SKILL.md`
-6. `meta/.opencode/skills/test-lead-discussion/SKILL.md`
-7. `meta/.opencode/skills/test-lead-validation/SKILL.md`
-8. `meta/.opencode/skills/test-lead-integration/SKILL.md`
-9. `meta/.opencode/skills/README.md` → índice maestro
+5. `meta/.claude/skills/test-lead-delegation/SKILL.md`
+6. `meta/.claude/skills/test-lead-discussion/SKILL.md`
+7. `meta/.claude/skills/test-lead-validation/SKILL.md`
+8. `meta/.claude/skills/test-lead-integration/SKILL.md`
+9. `meta/.claude/skills/README.md` → índice maestro
 
 ---
 
@@ -272,14 +272,14 @@ Todos son pares, cada uno con su propia área de expertise en QA. Cada uno tiene
 - **Idioma**: español (términos técnicos en inglés).
 - **Presupuesto de tokens**: agente ≤3.200 · `SKILL.md` ≤2.000 · detalle ≤6.000.
 - **Approval Gate**: el usuario debe aprobar explícitamente antes de cualquier ejecución que afecte sistemas reales.
-- **Coordinación**: cada agente experto conserva su propio `AGENTS.md`, skills y convenciones. `meta/` solo orquesta y revisa.
+- **Coordinación**: cada agente experto conserva su propio `CLAUDE.md`, skills y convenciones. `meta/` solo orquesta y revisa.
 - **Idioma y tono**: cada agente experto conserva su personalidad (APU, Scripto, etc.); `Coordi` y `Maru` también tienen identidad propia.
 
 ---
 
 ## 8. Preguntas Abiertas
 
-- ¿Cuál es el mecanismo concreto de invocación entre repos? (MCP server, `subagent` de OpenCode, o lectura/escritura de estado compartido en disco)
+- ¿Cuál es el mecanismo concreto de invocación entre repos? (MCP server, `subagent` de Claude Code, o lectura/escritura de estado compartido en disco)
 - ¿Maru es un agente independiente con modelo propio o una skill cargada por `Coordi`?
 - ¿Los expertos comparten `plan_id` o cada uno genera el suyo y `Coordi` los vincula?
 
@@ -291,29 +291,29 @@ Secuencia del §6 ejecutada al 100 %:
 
 | # | Artefacto | Estado |
 |---|---|---|
-| 1 | `opencode.json` → `default_agent: test-lead-orchestrator` | ✅ |
-| 2 | `AGENTS.md` → guía persistente del ecosistema | ✅ |
-| 3 | `.opencode/agents/test-lead-orchestrator.md` → Coordi | ✅ |
+| 1 | `.claude/settings.json` → permisos y acceso cross-repo | ✅ |
+| 2 | `CLAUDE.md` → guía persistente del ecosistema | ✅ |
+| 3 | `.claude/agents/test-lead-orchestrator.md` → Coordi | ✅ |
 | 4 | `docs/governance/coe-reviewer.md` → contrato de revisión que aplica `Maru` | ✅ |
-| 5 | `.opencode/skills/test-lead-delegation/SKILL.md` | ✅ |
-| 6 | `.opencode/skills/test-lead-discussion/SKILL.md` | ✅ |
-| 7 | `.opencode/skills/test-lead-validation/SKILL.md` | ✅ |
-| 8 | `.opencode/skills/test-lead-integration/SKILL.md` | ✅ |
-| 9 | `.opencode/skills/README.md` → índice maestro | ✅ |
+| 5 | `.claude/skills/test-lead-delegation/SKILL.md` | ✅ |
+| 6 | `.claude/skills/test-lead-discussion/SKILL.md` | ✅ |
+| 7 | `.claude/skills/test-lead-validation/SKILL.md` | ✅ |
+| 8 | `.claude/skills/test-lead-integration/SKILL.md` | ✅ |
+| 9 | `.claude/skills/README.md` → índice maestro | ✅ |
 
 ### Respuestas a las Preguntas Abiertas (§8)
 
-1. **Mecanismo de invocación → routers cross-repo + handoff por disco.** La restricción original ("los subagentes son locales al workspace") queda resuelta en `meta/opencode.json`: los 5 agentes del crew se declaran con `mode: all` (lanzables como subagentes desde `meta/` y seleccionables como agente principal), `skills` apunta a las carpetas `.opencode/skills` de cada repo y `permissions.external_directory` habilita el acceso a `C:/Users/crisq/Repo/*`. Cada router lee su definición canónica y su `AGENTS.md` en su repo antes de operar, así que no hay duplicación de conocimiento. Orden de invocación: router como subagente → `opencode run --agent <id>` desde su repo → handoff por disco (`delegations/{task_id}.md` → `deliveries/{task_id}.md`).
-2. **Maru → agente reviewer, con cerebro externo.** El agente real es `maru` (repo `../COE`), invocado desde `meta/` por el router de `opencode.json`. En `meta/` vive solo el *contrato* de revisión en `docs/governance/coe-reviewer.md`: políticas, checklist, umbrales de veredicto — **como documento, no como agente** (ver §3.3). El conocimiento de gobernanza vive en `../COE` (agente `maru`, 14 skills), ya existente. Sin duplicación de conocimiento ni dos agentes COE compitiendo.
+1. **Mecanismo de invocación → subagentes router + handoff por disco.** Los subagentes de Claude Code son locales a su workspace, así que los 5 routers del crew se materializan como archivos en `meta/.claude/agents/` (`ptlc-orchestrator`, `api-tlc-orchestrator-api`, `manual-tlc-orchestrator-manual`, `automation-qa-orchestrator`, `maru`): cada uno lee el `CLAUDE.md` y el `.claude/agents/<id>.md` de su repo hermano por ruta relativa (`../<repo>`) y adopta esa identidad antes de operar, así que no hay duplicación de conocimiento. `meta/.claude/settings.json` concede el acceso a los repos hermanos con `permissions.additionalDirectories`. Orden de invocación: subagente router → `claude --agent <id>` con el cwd en su repo → handoff por disco (`delegations/{task_id}.md` → `deliveries/{task_id}.md`).
+2. **Maru → agente reviewer, con cerebro externo.** El agente real es `maru` (repo `../COE`), invocado desde `meta/` por el subagente router `.claude/agents/maru.md`. En `meta/` vive solo el *contrato* de revisión en `docs/governance/coe-reviewer.md`: políticas, checklist, umbrales de veredicto — **como documento, no como agente** (ver §3.3). El conocimiento de gobernanza vive en `../COE` (agente `maru`, 14 skills), ya existente. Sin duplicación de conocimiento ni dos agentes COE compitiendo.
 3. **`plan_id` → uno maestro + uno interno por experto.** `Coordi` genera el `plan_id` maestro; cada experto genera el suyo en su repo y lo vincula con `meta_plan_id` + `task_id` en la entrega. Así cada repo conserva su namespace y `Coordi` puede consolidar.
 
 ### Stakeholders (`Biz`) — decisión de diseño
 
-- **Qué es:** el agente de stakeholders (negocio/cliente) del ecosistema, en `meta/.opencode/agents/biz.md`. No es proveedor de evidencia: fija el *qué* y el *por qué*; `Coordi` decide el *cómo* y a quién delega.
-- **Obligatoriedad:** todo request QA abre con su gate de intake en Phase 0 (brief de negocio → `stakeholder_brief.md`) y cierra con su veredicto en Phase 5. **Sin brief no se delega; sin `ACCEPTED` no se cierra.** La regla vive en `AGENTS.md`, en el agente de `Coordi` y en la skill `test-lead-stakeholder`.
+- **Qué es:** el agente de stakeholders (negocio/cliente) del ecosistema, en `meta/.claude/agents/biz.md`. No es proveedor de evidencia: fija el *qué* y el *por qué*; `Coordi` decide el *cómo* y a quién delega.
+- **Obligatoriedad:** todo request QA abre con su gate de intake en Phase 0 (brief de negocio → `stakeholder_brief.md`) y cierra con su veredicto en Phase 5. **Sin brief no se delega; sin `ACCEPTED` no se cierra.** La regla vive en `CLAUDE.md`, en el agente de `Coordi` y en la skill `test-lead-stakeholder`.
 - **Naturaleza:** stakeholder obligatorio, no opcional. Distingue el cierre técnico (`PASSED` del COE) del cierre de negocio (`ACCEPTED` de `Biz`); son gates independientes.
-- **Restricción:** un subagente no puede entrevistar al usuario. Si `Biz` corre como subagente, redacta el brief y deja las dudas en `open_questions` para que `Coordi` las traslade; la entrevista completa es posible cuando el usuario abre sesión directamente con `Biz` (`mode: all`).
+- **Restricción:** un subagente no puede entrevistar al usuario. Si `Biz` corre como subagente, redacta el brief y deja las dudas en `open_questions` para que `Coordi` las traslade; la entrevista completa es posible cuando el usuario invoca directamente a `Biz` (`@agent-biz`).
 
 ### Nota de alcance
 
-`meta/` orquesta, delega, valida e integra; **no ejecuta pruebas ni escribe código de test**. Cada experto conserva su repo, su `AGENTS.md`, sus skills y su ciclo de 6 fases.
+`meta/` orquesta, delega, valida e integra; **no ejecuta pruebas ni escribe código de test**. Cada experto conserva su repo, su `CLAUDE.md`, sus skills y su ciclo de 6 fases.

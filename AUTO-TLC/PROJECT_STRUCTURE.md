@@ -170,4 +170,4 @@ tests/
 
 ---
 
-*Estructura v1.0 — Automation Test Life Cycle (AUTO-TLC). Platform: OpenCode.*
+*Estructura v1.0 — Automation Test Life Cycle (AUTO-TLC). Platform: Claude Code.*

@@ -2,7 +2,7 @@
 
 > **MANUAL-TLC** es un agente de QA conversacional llamado **MANU** que acompaña todo el ciclo de pruebas **manuales** de un sistema web: desde la recopilación de requisitos hasta el reporte final con veredicto. Para navegar la aplicación real y capturar evidencia, MANU usa una única herramienta de apoyo: el **Playwright MCP Server**.
 
-Este repositorio **no contiene código de aplicación**: es un *knowledge base + configuración de agente* para [OpenCode](https://opencode.ai) — 1 agente orquestador, **42 skills** (6 de fase, 10 de dominio y 26 de conocimiento) y una base de conocimiento de testing manual.
+Este repositorio **no contiene código de aplicación**: es un *knowledge base + configuración de agente* para [Claude Code](https://code.claude.com/docs) — 1 agente orquestador, **42 skills** (6 de fase, 10 de dominio y 26 de conocimiento) y una base de conocimiento de testing manual.
 
 ## 🤖 ¿Qué hace MANU?
 
@@ -28,20 +28,20 @@ MANU no ejecuta tests automatizados: **te acompaña durante la prueba manual**. 
 
 **Prerrequisitos**
 
-- [OpenCode](https://opencode.ai) instalado
+- [Claude Code](https://code.claude.com/docs) instalado
 - **Node.js 18+** (para `npx`)
 - Un navegador basado en Chromium/Chrome (el que maneja el Playwright MCP Server)
 
 **Pasos**
 
-1. Cloná el repositorio y abrilo con OpenCode desde su carpeta:
+1. Cloná el repositorio y abrilo con Claude Code desde su carpeta:
 
    ```bash
    cd MANUAL-TLC
-   opencode
+   Claude Code
    ```
 
-2. El agente por defecto ya es `MANUAL-TLC-orchestrator-manual` (MANU) y el Playwright MCP Server ya viene configurado en `opencode.json`:
+2. El agente por defecto ya es `MANUAL-TLC-orchestrator-manual` (MANU) y el Playwright MCP Server ya viene configurado en `.claude/settings.json`:
 
    ```json
    {
@@ -257,7 +257,7 @@ No tenés que pedirlas: MANU las carga solas según la fase y la necesidad.
 ## 🆘 Problemas frecuentes
 
 **El navegador no abre / no aparecen las herramientas `browser_*`**
-El servidor MCP se carga al iniciar la sesión: reiniciá OpenCode. Para verificar, corré `npx @playwright/mcp@latest --version`.
+El servidor MCP se carga al iniciar la sesión: reiniciá Claude Code. Para verificar, corré `npx @playwright/mcp@latest --version`.
 
 **¿Puedo usar otra herramienta (Postman, Selenium, etc.)?**
 Solo si lo pedís explícitamente en la conversación; MANU registrará el motivo en `selected_tool.rationale`.

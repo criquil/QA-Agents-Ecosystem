@@ -27,7 +27,7 @@
 - [ ] Todos los hallazgos P1 cerrados con evidencia.
 - [ ] Hallazgos P2 con plan de mitigación aprobado.
 - [ ] Métricas dentro de umbral en la auditoría siguiente.
-- [ ] Estándares actualizados en `.opencode/skills/` si el proceso cambió.
+- [ ] Estándares actualizados en `.claude/skills/` si el proceso cambió.
 
 ## Seguimiento
 

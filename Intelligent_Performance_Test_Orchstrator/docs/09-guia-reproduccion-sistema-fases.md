@@ -16,10 +16,10 @@
 | [3](#3-los-8-invariantes-de-diseño) | Invariantes de diseño | Por qué funciona y qué no se puede romper |
 | [4](#4-paso-0--decidir-antes-de-escribir-nada) | Paso 0 — Brief de diseño | 12 decisiones previas, con trade-offs |
 | [5](#5-paso-1--fundar-el-repositorio) | Paso 1 — Fundar el repo | Árbol mínimo + idioma |
-| [6](#6-paso-2--índice-maestro-nivel-1) | Paso 2 — Índice maestro | `.opencode/skills/README.md` |
+| [6](#6-paso-2--índice-maestro-nivel-1) | Paso 2 — Índice maestro | `.claude/skills/README.md` |
 | [7](#7-paso-3--agente-orquestador) | Paso 3 — Agente orquestador | Plantilla completa del agente raíz |
-| [8](#8-paso-4--configuración-de-opencode) | Paso 4 — `opencode.json` | Entry point obligatorio |
-| [9](#9-paso-5--agentsmd-raíz) | Paso 5 — `AGENTS.md` | Reglas persistentes bajo presupuesto |
+| [8](#8-paso-4--configuración-de-Claude Code) | Paso 4 — `.claude/settings.json` | Entry point obligatorio |
+| [9](#9-paso-5--agentsmd-raíz) | Paso 5 — `CLAUDE.md` | Reglas persistentes bajo presupuesto |
 | [10](#10-paso-6--contrato-del-contexto-acumulado) | Paso 6 — Contexto acumulado | `CONTEXT_ENVELOPE.md` + JSON vacío |
 | [11](#11-paso-7--contrato-de-estado-planyaml) | Paso 7 — Estado del ciclo | `plan.yaml` |
 | [12](#12-paso-8--diseñar-la-tabla-de-fases) | Paso 8 — Tabla de fases | Reglas para decidir N y el orden |
@@ -83,8 +83,8 @@ El sistema tiene **8 piezas**. Si falta una, el patrón se rompe.
 
 ```
 ┌─ SIEMPRE ACTIVO (se paga en CADA request) ────────────────────────────┐
-│  1. opencode.json          → fija el agente por defecto                │
-│  2. AGENTS.md (raíz)       → reglas persistentes del repo             │
+│  1. .claude/settings.json          → fija el agente por defecto                │
+│  2. CLAUDE.md (raíz)       → reglas persistentes del repo             │
 │  3. descripciones frontmatter de cada skill → enrutado automático     │
 └───────────────────────────────────────────────────────────────────────┘
                           │
@@ -218,9 +218,9 @@ Tres niveles de navegación + cheat sheets. El agente nunca abre un documento la
 
 ```bash
 /
-├── AGENTS.md                       # (paso 5)
-├── opencode.json                   # (paso 4)
-├── .opencode/
+├── CLAUDE.md                       # (paso 5)
+├── .claude/settings.json                   # (paso 4)
+├── .claude/
 │   ├── agents/
 │   │   └── {ORCH}.md               # (paso 3)
 │   └── skills/
@@ -231,7 +231,7 @@ Tres niveles de navegación + cheat sheets. El agente nunca abre un documento la
 │       ├── {P}-gob/                # (pasos 6, 7, 13)
 │       │   ├── PRD.yaml
 │       │   ├── CONTEXT_ENVELOPE.md
-│       │   ├── AGENTS.md
+│       │   ├── CLAUDE.md
 │       │   └── MAP.md
 │       └── {P}-conocimiento-*/     # (paso 12)
 │           ├── SKILL.md
@@ -249,7 +249,7 @@ Tres niveles de navegación + cheat sheets. El agente nunca abre un documento la
 
 ### 5.2 Decisión de idioma
 
-Un solo idioma en: `AGENTS.md`, `README.md` de skills, descripciones frontmatter, outputs de fase, entregables y conversación del agente. Mezclar idiomas en navegación y en nombres de clave del JSON produce fricción permanente y duplica el trabajo de traducción.
+Un solo idioma en: `CLAUDE.md`, `README.md` de skills, descripciones frontmatter, outputs de fase, entregables y conversación del agente. Mezclar idiomas en navegación y en nombres de clave del JSON produce fricción permanente y duplica el trabajo de traducción.
 
 > **Por qué importa en este patrón:** el presupuesto de tokens es `caracteres / 3.5` asumiendo español. En inglés la relación es ~`caracteres / 4`; el medidor debe ajustarse (§18).
 
@@ -263,7 +263,7 @@ Un solo idioma en: `AGENTS.md`, `README.md` de skills, descripciones frontmatter
 
 ## 6. Paso 2 — Índice maestro (Nivel 1)
 
-`.opencode/skills/README.md` es lo **único** que el agente debe leer para saber qué existe. Se carga bajo demanda, pero es el mapa completo.
+`.claude/skills/README.md` es lo **único** que el agente debe leer para saber qué existe. Se carga bajo demanda, pero es el mapa completo.
 
 ### 6.1 Plantilla
 
@@ -279,7 +279,7 @@ Un solo idioma en: `AGENTS.md`, `README.md` de skills, descripciones frontmatter
 
 ## Arquitectura v1.0
 
-- **Entry point obligatorio:** `{ORCH}` (`.opencode/agents/{ORCH}.md`) — todo request entra por él.
+- **Entry point obligatorio:** `{ORCH}` (`.claude/agents/{ORCH}.md`) — todo request entra por él.
   Orquesta las N fases de {DOM} cargando las skills del pipeline, y resuelve las tareas
   generales (no-{DOM}) con los subagentes genéricos o desde el knowledge base.
 - **Pipeline {DOM}:** N skills de fase (`{F1}` → … → `{Fn}`), con approval gate antes de ejecutar.
@@ -307,8 +307,8 @@ formato de salida y reglas). Invocadas por `{ORCH}` en orden secuencial.
 
 ## Consultas cheats (leer antes que el documento completo)
 
-- Fórmulas y umbrales → `.opencode/skills/{P}-metricas/00_Cheat_Sheet_Metricas.md`
-- Herramientas → `.opencode/skills/{KB}/00b_Cheat_Sheet_Herramientas.md`
+- Fórmulas y umbrales → `.claude/skills/{P}-metricas/00_Cheat_Sheet_Metricas.md`
+- Herramientas → `.claude/skills/{KB}/00b_Cheat_Sheet_Herramientas.md`
 
 ## Lookup Rápido por Necesidad
 
@@ -321,7 +321,7 @@ formato de salida y reglas). Invocadas por `{ORCH}` en orden secuencial.
 ## Estructura de cada skill temática
 
 ```
-.opencode/skills/<skill>/
+.claude/skills/<skill>/
 ├── SKILL.md        ← índice temático (frontmatter + resumen + tabla de contenido)
 └── NN_Tema.md      ← documentos detallados (autoritativos)
 ```
@@ -381,7 +381,7 @@ Todo mensaje entra primero por ti. En Phase 0 detectas el dominio:
 
 - **{DOM}** → orquestas el pipeline de {N} fases cargando la skill de cada fase.
 - **general (no-{DOM})** → resuelves el request con los subagentes genéricos
-  (`general` para trabajo multi-paso, `explore` para exploración del repo) o desde el knowledge base.
+  (`general-purpose` para trabajo multi-paso, `Explore` para exploración del repo) o desde el knowledge base.
 
 Tu trabajo es EXCLUSIVAMENTE de orquestación: cargar la skill correcta en el momento correcto,
 pasar contexto acumulado, sintetizar resultados, gestionar el estado del plan y comunicar el progreso.
@@ -394,8 +394,8 @@ NUNCA reimprovises ninguna de las fases: SIEMPRE ejecuta el procedimiento defini
 
 ## Recursos Disponibles
 
-Skills de fase (`.opencode/skills/{{P}}-*/SKILL.md`): las {N} fases F1-F{N}.
-Para tareas generales: subagentes genéricos `general` y `explore`.
+Skills de fase (`.claude/skills/{{P}}-*/SKILL.md`): las {N} fases F1-F{N}.
+Para tareas generales: subagentes genéricos `general-purpose` y `Explore`.
 
 </available_resources>
 
@@ -403,9 +403,9 @@ Para tareas generales: subagentes genéricos `general` y `explore`.
 
 ## Fuentes de Conocimiento
 
-- `.opencode/skills/README.md` — índice maestro del knowledge base
-- `.opencode/skills/{P}-gob/PRD.yaml` — requisitos del producto (Phase 0)
-- `.opencode/skills/{P}-gob/CONTEXT_ENVELOPE.md` — contrato del contexto acumulado
+- `.claude/skills/README.md` — índice maestro del knowledge base
+- `.claude/skills/{P}-gob/PRD.yaml` — requisitos del producto (Phase 0)
+- `.claude/skills/{P}-gob/CONTEXT_ENVELOPE.md` — contrato del contexto acumulado
 - `docs/plan/{{plan_id}}/plan.yaml` — estado del plan activo
 - `docs/plan/{{plan_id}}/context_envelope.json` — contexto acumulado del ciclo
 - `{PLAN_DOC}` — plan formal generado (si existe)
@@ -510,9 +510,9 @@ Cierre con veredicto, entregables, top 3 recomendaciones y estado por fase (form
 </rules>
 ```
 
-### 7.3 Por qué el agente NO lleva el frontmatter `name`
+### 7.3 Frontmatter del agente
 
-El `default_agent` de `opencode.json` resuelve por **nombre de archivo**. El frontmatter `description` es lo que el cliente muestra al elegir agente y lo que algunos IDE indexan: mantenlo corto (≤ 80 caracteres).
+El agente **requiere `name` y `description`** en el frontmatter: Claude Code **ignora en silencio** cualquier archivo de agente al que le falte uno de los dos (o cuyo `---` no sea la primera línea). `name` no necesita coincidir con el nombre del archivo, pero conviene que coincida. La `description` es lo que se muestra al elegir agente: mantenla corta (≤ 80 caracteres).
 
 ### 7.4 Checklist de aceptación
 
@@ -525,45 +525,49 @@ El `default_agent` de `opencode.json` resuelve por **nombre de archivo**. El fro
 
 ---
 
-## 8. Paso 4 — Configuración de OpenCode
+## 8. Paso 4 — Configuración de Claude Code
+
+Claude Code **no tiene `default_agent`**: el entry point se declara en el `CLAUDE.md` del repo
+(Paso 5) y el agente vive en `.claude/agents/{ORCH}.md`. El `.claude/settings.json` solo lleva
+permisos y directorios adicionales, si hacen falta:
 
 ```json
 {
-  "$schema": "https://opencode.ai/config.json",
-  "default_agent": "{ORCH}"
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": { "allow": ["Agent", "Skill"] }
 }
 ```
 
 Tres reglas:
 
-1. **El nombre en `default_agent` debe coincidir exactamente** con el nombre de archivo `.opencode/agents/{ORCH}.md` (sin extensión, minúsculas, con guion).
+1. **El `name` del frontmatter de `.claude/agents/{ORCH}.md`** es el identificador con el que se invoca al agente (`@agent-{ORCH}` o `claude --agent {ORCH}`). Sin `name` y `description`, Claude Code ignora el archivo en silencio.
 2. **No definas agentes de fase.** Un agente por fase multiplica el contexto siempre activo por N. Las fases son *skills*, no agentes. Esta es una de las decisiones que más presupuesto ahorra.
 3. Si necesitas herramientas adicionales (permisos, plugins), añádelas aquí, pero recuerda que **cada línea de este archivo se paga en cada request**: es presupuesto activo.
 
 ---
 
-## 9. Paso 5 — `AGENTS.md` raíz
+## 9. Paso 5 — `CLAUDE.md` raíz
 
 Es la guía persistente que se inyecta en **cada** request. Máximo presupuesto, máxima compresión.
 
 ### 9.1 Plantilla
 
 ```markdown
-# AGENTS.md
+# CLAUDE.md
 
-Guía persistente para agentes OpenCode.
+Guía persistente para agentes Claude Code.
 
 ## Qué es
 
 **{Nombre del proyecto}**: {una frase}. El conocimiento vive como skills en
-`.opencode/skills/`; el agente `{ORCH}` orquesta el ciclo de {DOM}.
+`.claude/skills/`; el agente `{ORCH}` orquesta el ciclo de {DOM}.
 
 **Idioma primario: {IDIOMA}** en documentación, output y navegación.
 
 ## Entry point
 
-**`{ORCH}` es el entry point OBLIGATORIO de todo request** (`opencode.json` lo fija como
-`default_agent`). Detecta el dominio en Phase 0 y ejecuta el pipeline cargando una skill por fase;
+**`{ORCH}` es el entry point OBLIGATORIO de todo request** (agente en
+`.claude/agents/{ORCH}.md`). Detecta el dominio en Phase 0 y ejecuta el pipeline cargando una skill por fase;
 lo no-{DOM} se resuelve con los subagentes genéricos o desde el knowledge base.
 
 - **1 · `{F1}`** — {rol}
@@ -576,19 +580,19 @@ lo no-{DOM} se resuelve con los subagentes genéricos o desde el knowledge base.
 
 ## Reglas obligatorias
 
-- **`<pre_execution>`**: todo agente o skill con esa sección DEBE leer con `read` lo que lista
+- **`<pre_execution>`**: todo agente o skill con esa sección DEBE leer con `Read` lo que lista
   antes de producir output.
-- **3 niveles**: `.opencode/skills/README.md` (Nivel 1) → `SKILL.md` (Nivel 2) →
+- **3 niveles**: `.claude/skills/README.md` (Nivel 1) → `SKILL.md` (Nivel 2) →
   `NN_Tema.md` (Nivel 3). Leer el Nivel 2 antes de editar un Nivel 3.
 - **Edición**: Nivel 3 usa naming `NN_Topic_Name.md`. No duplicar docs: actualizar el existente.
   Al mover o renombrar, actualizar referencias en `README.md` y el `SKILL.md` padre.
-- **Catálogo**: el índice de skills está en `.opencode/skills/README.md`.
+- **Catálogo**: el índice de skills está en `.claude/skills/README.md`.
 
 ## Presupuesto de tokens
 
 - **Índice antes que documento**: dudas → `SKILL.md`/índice; detalle → `grep -n "^## "` +
-  `read` por offset/limit. Nunca leer completo un doc >2.000 tokens.
-- **Cheat sheets primero**: fórmulas/umbrales en los `00_Cheat_Sheet_*.md` bajo `.opencode/skills/`.
+  `Read` por offset/limit. Nunca leer completo un doc >2.000 tokens.
+- **Cheat sheets primero**: fórmulas/umbrales en los `00_Cheat_Sheet_*.md` bajo `.claude/skills/`.
 - **Envelope acumulado**: cada fase persiste su bloque en `docs/plan/{plan_id}/context_envelope.json`;
   las siguientes lo cargan y no releen lo ya sintetizado.
 - **Medición continua**: `python scripts/measure.py --strict` valida los presupuestos vigentes.
@@ -602,10 +606,10 @@ lo no-{DOM} se resuelve con los subagentes genéricos o desde el knowledge base.
 
 ## Rutas clave
 
-- `.opencode/skills/README.md` — índice maestro
-- `.opencode/skills/{P}-gob/PRD.yaml` — requisitos de producto (Phase 0)
-- `.opencode/agents/{ORCH}.md` — entry point y pipeline
-- `opencode.json` — `default_agent` y config del proyecto
+- `.claude/skills/README.md` — índice maestro
+- `.claude/skills/{P}-gob/PRD.yaml` — requisitos de producto (Phase 0)
+- `.claude/agents/{ORCH}.md` — entry point y pipeline
+- `.claude/settings.json` — permisos del proyecto
 ```
 
 ### 9.2 Reglas de redacción
@@ -613,7 +617,7 @@ lo no-{DOM} se resuelve con los subagentes genéricos o desde el knowledge base.
 - **Solo información accionable.** Nada de historia del proyecto, nada de contexto que el agente pueda derivar.
 - **Presupuestos explícitos con su número.** El agente no puede estimar tokens; dile el límite y dónde se verifica.
 - **Tabla de entregables con rutas exactas**, para que la fase de ejecución sepa dónde escribir sin preguntar.
-- **Nada de duplicar lo que el índice maestro ya dice.** `AGENTS.md` = reglas; `README.md` = mapa.
+- **Nada de duplicar lo que el índice maestro ya dice.** `CLAUDE.md` = reglas; `README.md` = mapa.
 
 ### 9.3 Checklist de aceptación
 
@@ -714,7 +718,7 @@ La pregunta que decide el tamaño de cada bloque es: **¿qué necesita leer una 
   "constraints": ["string"],
   "tool_selected": "opción_1 | opción_2 | opción_3",
   "tool_rationale": ["string"],
-  "source": ".opencode/skills/{KB}/NN_Tema.md §Sección (línea 380)"
+  "source": ".claude/skills/{KB}/NN_Tema.md §Sección (línea 380)"
 }
 ```
 
@@ -860,15 +864,15 @@ description: "{≤80 car. — se paga en CADA request}"
 **Cargar `docs/plan/{plan_id}/context_envelope.json` si existe; no releer documentos ya sintetizados.**
 
 **Leer exactamente lo listado; máximo 2 documentos COMPLETOS. Sección = `grep -n "^## " <archivo>`
-+ `read` offset/limit.**
++ `Read` offset/limit.**
 
 ### Documentos completos
-- `.opencode/skills/{kb}/SKILL.md` — {qué se saca de él}
-- `.opencode/skills/{kb2}/SKILL.md` — {qué se saca}
+- `.claude/skills/{kb}/SKILL.md` — {qué se saca de él}
+- `.claude/skills/{kb2}/SKILL.md` — {qué se saca}
 
 ### Lecturas por sección
-- `.opencode/skills/{kb}/NN_Tema.md` §Sección (línea 141) — {qué se saca}
-- `.opencode/skills/{kb}/NN_Tema.md` §Otra (línea 380) — {qué se saca}
+- `.claude/skills/{kb}/NN_Tema.md` §Sección (línea 141) — {qué se saca}
+- `.claude/skills/{kb}/NN_Tema.md` §Otra (línea 380) — {qué se saca}
 
 {Cómo aplicar lo leído: "Aplicar la matriz de decisión de X e identificar los tipos relevantes de Y."}
 
@@ -923,7 +927,7 @@ Retornar SOLO JSON válido:
 
 - NO {lo que esta fase no debe hacer} — eso es de {Fase vecina}.
 - Solo preguntar lo que falta: no repetir información ya provista.
-- Usar la documentación en `.opencode/skills/` como referencia, no inventar criterios.
+- Usar la documentación en `.claude/skills/` como referencia, no inventar criterios.
 - {Reglas de dominio específicas: umbrales, fuentes obligatorias, límites de cantidad.}
 - Citar la fuente documental de cada recomendación.
 
@@ -993,7 +997,7 @@ Antes de dar por cerrado el pipeline, comprueba que **cada bloque del envelope t
 
 ```bash
 # qué bloques escribe cada fase y qué fases los leen
-Select-String -Path ".opencode/skills/*/SKILL.md" -Pattern 'Persistir el bloque'
+Select-String -Path ".claude/skills/*/SKILL.md" -Pattern 'Persistir el bloque'
 ```
 
 Y la comprobación inversa: ninguna fase escribe un campo que nadie lee.
@@ -1046,7 +1050,7 @@ Esto es **muy poderoso**: el sistema es útil incluso sin aprobación (prepara t
 
 | Nivel | Archivo | Tamaño | Se lee | Ejemplo |
 |-------|---------|--------|--------|---------|
-| **1** | `.opencode/skills/README.md` | ≤ 1.000 tok | Al empezar cualquier duda | Índice maestro |
+| **1** | `.claude/skills/README.md` | ≤ 1.000 tok | Al empezar cualquier duda | Índice maestro |
 | **2** | `{skill}/SKILL.md` | ≤ 2.000 tok | Al decidir qué hacer | Panorámico del tema |
 | **3** | `{skill}/NN_Tema.md` | ≤ 6.000 tok | **Por sección, nunca completo** | Detalle autoritativo |
 
@@ -1115,7 +1119,7 @@ Alternativa si quieres que el mapa sea automático: el agente hace `grep -n "^##
 Un archivo YAML que el orquestador lee en Phase 0. Su función no es documentar, es **recordarle al agente qué está construyendo**.
 
 ```yaml
-# .opencode/skills/{P}-gob/PRD.yaml
+# .claude/skills/{P}-gob/PRD.yaml
 product:
   name: "{Nombre del producto}"
   version: "1.0"
@@ -1155,11 +1159,11 @@ constraints:
 
 ### 17.1 Dónde va la información clave
 
-| Información | Por qué va en el PRD y no en `AGENTS.md` |
+| Información | Por qué va en el PRD y no en `CLAUDE.md` |
 |-------------|------------------------------------------|
 | Lista de fases y sus outputs | El orquestador lo necesita en Phase 2; es detallado y cambia más que el contexto siempre activo |
 | Opciones soportadas | Evita que la fase 1 invente una quinta opción |
-| Restricciones duras | Duplica `AGENTS.md` a propósito: si `AGENTS.md` se compacta, el PRD sobrevive |
+| Restricciones duras | Duplica `CLAUDE.md` a propósito: si `CLAUDE.md` se compacta, el PRD sobrevive |
 | Qué NO es el proyecto | Previene expectativas equivocadas en Phase 0 |
 
 ---
@@ -1172,13 +1176,13 @@ constraints:
 
 | Ámbito | Límite (sistema de origen) | Qué protege |
 |--------|---------------------------|-------------|
-| Contexto siempre activo (`AGENTS.md` + `opencode.json` + descripciones de skills) | ≤ 1.500 tokens | Coste por request |
+| Contexto siempre activo (`CLAUDE.md` + `.claude/settings.json` + descripciones de skills) | ≤ 1.500 tokens | Coste por request |
 | Cuerpo de cada agente | ≤ 3.200 tokens | Coste al arrancar el ciclo |
 | Índice `SKILL.md` de cada skill | ≤ 2.000 tokens | Coste al cargar una fase |
 | Documento de detalle | ≤ 23.000 tokens | Crecimiento descontrolado |
 | Lectura obligatoria sin acotar | > 2.000 tokens sin `§`/línea | Coste real por fase |
 
-> El sistema de origen arrastra una **derivación documental**: `AGENTS.md` decía 1.400/6.000 y `docs/08` decía 1.500/23.000, que es lo que realmente aplica el script. **Lección para tu proyecto: los números viven en el script y en un solo documento normativo; el resto de archivos enlaza, no copia.**
+> El sistema de origen arrastra una **derivación documental**: `CLAUDE.md` decía 1.400/6.000 y `docs/08` decía 1.500/23.000, que es lo que realmente aplica el script. **Lección para tu proyecto: los números viven en el script y en un solo documento normativo; el resto de archivos enlaza, no copia.**
 
 ### 18.2 Script portable
 
@@ -1189,7 +1193,7 @@ Guarda esto como `scripts/measure.py`. Sin dependencias externas, Python 3.9+.
 # -*- coding: utf-8 -*-
 """Medidor de presupuesto de tokens del knowledge base.
 
-Recorre `.opencode/agents/*.md` y `.opencode/skills/**` y estima el coste de cada
+Recorre `.claude/agents/*.md` y `.claude/skills/**` y estima el coste de cada
 artefacto como `caracteres / 3.5` (conservador para texto en español).
 
 Uso:
@@ -1254,8 +1258,8 @@ def rel(root, path):
 
 def collect(root):
     """Recolecta agentes, skills y documentos de detalle."""
-    skills_dir = os.path.join(root, ".opencode", "skills")
-    agents_dir = os.path.join(root, ".opencode", "agents")
+    skills_dir = os.path.join(root, ".Claude Code", "skills")
+    agents_dir = os.path.join(root, ".Claude Code", "agents")
     report = {"agents": [], "skills": [], "detail": {}, "dupes": [], "near_dupes": []}
 
     for path in sorted(glob.glob(os.path.join(agents_dir, "*.md"))):
@@ -1316,13 +1320,13 @@ def shingles(path):
 
 
 def totals(report, root):
-    agents_md = os.path.join(root, "AGENTS.md")
-    oc = os.path.join(root, "opencode.json")
+    agents_md = os.path.join(root, "CLAUDE.md")
+    oc = os.path.join(root, ".claude/settings.json")
     return {
         "skill_desc_tokens": sum(s["desc_tokens"] for s in report["skills"]),
         "agent_desc_tokens": sum(a["desc_tokens"] for a in report["agents"]),
         "agents_md_tokens": tokens(read_text(agents_md)) if os.path.isfile(agents_md) else 0,
-        "opencode_json_tokens": tokens(read_text(oc)) if os.path.isfile(oc) else 0,
+        "Claude Code_json_tokens": tokens(read_text(oc)) if os.path.isfile(oc) else 0,
         "agent_body_tokens": sum(a["body_tokens"] for a in report["agents"]),
         "skill_index_tokens": sum(s["index_tokens"] for s in report["skills"]),
         "detail_tokens": sum(s["detail_tokens"] for s in report["skills"]),
@@ -1334,7 +1338,7 @@ def resolve_read_ref(root, ref):
     direct = os.path.join(root, *ref.split("/"))
     if os.path.isfile(direct):
         return direct
-    matches = glob.glob(os.path.join(root, ".opencode", "skills", "**",
+    matches = glob.glob(os.path.join(root, ".Claude Code", "skills", "**",
                                      os.path.basename(ref)), recursive=True)
     return matches[0] if len(matches) == 1 else None
 
@@ -1375,7 +1379,7 @@ def check_unbounded_reads(report, root):
 def check_budgets(report, tot):
     violations = []
     always_on = (tot["skill_desc_tokens"] + tot["agent_desc_tokens"]
-                 + tot["agents_md_tokens"] + tot["opencode_json_tokens"])
+                 + tot["agents_md_tokens"] + tot["Claude Code_json_tokens"])
     if always_on > BUDGET_ALWAYS_ON:
         violations.append({"scope": "contexto siempre activo",
                            "actual": always_on, "budget": BUDGET_ALWAYS_ON})
@@ -1412,11 +1416,11 @@ def main(argv=None):
 
     print("== CONTEXTO SIEMPRE ACTIVO ==")
     always_on = (tot["skill_desc_tokens"] + tot["agent_desc_tokens"]
-                 + tot["agents_md_tokens"] + tot["opencode_json_tokens"])
+                 + tot["agents_md_tokens"] + tot["Claude Code_json_tokens"])
     print("  descripciones skills   : %6d" % tot["skill_desc_tokens"])
     print("  descripciones agentes  : %6d" % tot["agent_desc_tokens"])
-    print("  AGENTS.md              : %6d" % tot["agents_md_tokens"])
-    print("  opencode.json          : %6d" % tot["opencode_json_tokens"])
+    print("  CLAUDE.md              : %6d" % tot["agents_md_tokens"])
+    print("  .claude/settings.json          : %6d" % tot["Claude Code_json_tokens"])
     print("  TOTAL por request      : %6d  [<= %d]" % (always_on, BUDGET_ALWAYS_ON))
 
     print("\n== AGENTES ==")
@@ -1490,7 +1494,7 @@ jobs:
       - run: python scripts/measure.py --strict
 ```
 
-Y añade un gate en `AGENTS.md`: *"Todo cambio que toque skills, agentes o `AGENTS.md` se verifica con `measure.py --strict` antes de darlo por cerrado."*
+Y añade un gate en `CLAUDE.md`: *"Todo cambio que toque skills, agentes o `CLAUDE.md` se verifica con `measure.py --strict` antes de darlo por cerrado."*
 
 ### 18.4 Checklist de aceptación
 
@@ -1618,20 +1622,19 @@ $Orch = "$Prefijo-orchestrator"
 $i = 0
 
 # --- 1. Directorios ---
-$dirs = @(".opencode/agents", ".opencode/skills/$Prefijo-gob", "docs", "scripts")
-foreach ($f in $Fases) { $dirs += ".opencode/skills/$Prefijo-$f" }
+$dirs = @(".claude/agents", ".claude/skills/$Prefijo-gob", "docs", "scripts")
+foreach ($f in $Fases) { $dirs += ".claude/skills/$Prefijo-$f" }
 foreach ($d in $dirs) { New-Item -ItemType Directory -Force -Path $d | Out-Null }
 
-# --- 2. opencode.json ---
+# --- 2. .claude/settings.json ---
 # Here-string simple: los backticks del markdown NO se interpretan.
 $cfg = @'
 {
-  "$schema": "https://opencode.ai/config.json",
-  "default_agent": "«ORCH»"
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": { "allow": ["Agent", "Skill"] }
 }
 '@
-$cfg = $cfg.Replace('«ORCH»', $Orch)
-Set-Content -Path "opencode.json" -Value $cfg -Encoding utf8
+Set-Content -Path ".claude/settings.json" -Value $cfg -Encoding utf8
 
 # --- 3. SKILL.md por fase ---
 $tpl = @'
@@ -1658,10 +1661,10 @@ NUNCA: que NO hace esta fase (delimite con la fase vecina).
 **Cargar `docs/plan/{plan_id}/context_envelope.json` si existe; no releer lo ya sintetizado.**
 
 ### Documentos completos (max. 2)
-- `.opencode/skills/<kb>/SKILL.md` — TODO
+- `.claude/skills/<kb>/SKILL.md` — TODO
 
 ### Lecturas por seccion
-- `.opencode/skills/<kb>/NN_Tema.md` §Seccion (linea NNN) — TODO
+- `.claude/skills/<kb>/NN_Tema.md` §Seccion (linea NNN) — TODO
 
 **Presupuesto de lectura:** ninguna lectura > 2.000 tokens; cargar secciones, no archivos completos.
 
@@ -1707,7 +1710,7 @@ Retornar SOLO JSON valido:
 foreach ($f in $Fases) {
   $skill = "$Prefijo-$f"
   $out = $tpl.Replace('«SKILL»', $skill).Replace('«BLOQUE»', $f)
-  Set-Content -Path ".opencode/skills/$skill/SKILL.md" -Value $out -Encoding utf8
+  Set-Content -Path ".claude/skills/$skill/SKILL.md" -Value $out -Encoding utf8
 }
 
 # --- 4. plan.yaml de ejemplo ---
@@ -1937,7 +1940,7 @@ Es una operación de *contenido*, no de arquitectura (§Anexo B). El kernel se q
 | Término | Significado |
 |---------|-------------|
 | **Fase** | Unidad de trabajo con entrada, procedimiento y salida JSON, implementada como una skill |
-| **Skill de fase** | `.opencode/skills/{Fn}/SKILL.md`: el procedimiento autoritativo de una fase |
+| **Skill de fase** | `.claude/skills/{Fn}/SKILL.md`: el procedimiento autoritativo de una fase |
 | **Knowledge base** | Skills temáticas de consulta; nunca ejecutan el ciclo |
 | **Nivel 1/2/3** | Índice maestro / `SKILL.md` / `NN_Tema.md` |
 | **Envelope** | `context_envelope.json`: memoria acumulada del ciclo, un bloque por fase |
@@ -1962,12 +1965,12 @@ Es una operación de *contenido*, no de arquitectura (§Anexo B). El kernel se q
 
 La implementación que da origen a este patrón (consultable en detalle para un caso real):
 
-- `.opencode/agents/{ORCH}.md` — agente orquestador
-- `.opencode/skills/README.md` — índice maestro
-- `.opencode/skills/*/SKILL.md` — las 6 skills de fase (8 bloques cada una)
-- `.opencode/skills/{P}-gob/CONTEXT_ENVELOPE.md` — contrato del contexto acumulado
-- `.opencode/skills/{P}-gob/PRD.yaml` — requisitos del producto
+- `.claude/agents/{ORCH}.md` — agente orquestador
+- `.claude/skills/README.md` — índice maestro
+- `.claude/skills/*/SKILL.md` — las 6 skills de fase (8 bloques cada una)
+- `.claude/skills/{P}-gob/CONTEXT_ENVELOPE.md` — contrato del contexto acumulado
+- `.claude/skills/{P}-gob/PRD.yaml` — requisitos del producto
 - `scripts/measure_tokens.py` — medidor de referencia
-- `AGENTS.md`, `opencode.json`, `docs/01..08` — gobierno y documentación
+- `CLAUDE.md`, `.claude/settings.json`, `docs/01..08` — gobierno y documentación
 
 *Este documento es deliberadamente genérico: los ejemplos de otros dominios son ilustrativos del mapeo, no plantillas de contenido.*

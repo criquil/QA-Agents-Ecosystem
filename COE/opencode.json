@@ -1,7 +1,0 @@
-{
-  "project": "COE-Marubo",
-  "default_agent": "maru",
-  "description": "Center of Excellence de Gobernanza QA. Agente independiente para gobernanza de buenas prácticas de QA (estándares, políticas de calidad, revisiones de proceso).",
-  "language": "es",
-  "entry_point": ".opencode/agents/maru.md"
-}

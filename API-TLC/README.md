@@ -1,6 +1,6 @@
 # API-TLC — API Test Life Cycle Orchestrator v1.0
 
-Sistema de orquestación inteligente para el ciclo de vida completo de pruebas de API, implementado como una base de conocimiento con un agente de IA orquestador y skills especializadas sobre la plataforma **OpenCode AI**.
+Sistema de orquestación inteligente para el ciclo de vida completo de pruebas de API, implementado como una base de conocimiento con un agente de IA orquestador y skills especializadas sobre la plataforma **Claude Code AI**.
 
 ---
 
@@ -196,8 +196,8 @@ flowchart LR
 
 ### Requisitos
 
-- **OpenCode AI** instalado y configurado.
-- El archivo `opencode.json` en la raíz de `API-TLC/` configura APU como agente por defecto.
+- **Claude Code AI** instalado y configurado.
+- El archivo `.claude/settings.json` en la raíz de `API-TLC/` configura APU como agente por defecto.
 
 ### Inicio rápido
 
@@ -228,7 +228,7 @@ sequenceDiagram
     APU-->>U: Informe final (PASSED / CONDITIONAL / FAILED)
 ```
 
-1. Abre el directorio `API-TLC/` en OpenCode AI.
+1. Abre el directorio `API-TLC/` en Claude Code AI.
 2. El agente APU se cargará automáticamente como agente por defecto.
 3. Describe la API que deseas probar y APU guiará el proceso completo de forma interactiva, cargando la skill de cada fase en orden.
 
@@ -241,10 +241,10 @@ graph TD
     ROOT["📁 API-TLC/"]
 
     ROOT --> README["📄 README.md"]
-    ROOT --> AGENTS["📄 AGENTS.md\nConvenciones del repo"]
-    ROOT --> OC["📄 opencode.json\nConfiguración OpenCode AI"]
+    ROOT --> AGENTS["📄 CLAUDE.md\nConvenciones del repo"]
+    ROOT --> OC["📄 .claude/settings.json\nConfiguración Claude Code AI"]
     ROOT --> PS["📄 PROJECT_STRUCTURE.md\nEstructura obligatoria de proyecto"]
-    ROOT --> OCD["📁 .opencode/"]
+    ROOT --> OCD["📁 .claude/"]
 
     OCD --> AG["📁 agents/\n1 definición: APU (orquestador)"]
     OCD --> SK["📁 skills/\n21 definiciones SKILL.md\n6 de fase + 15 de apoyo/conversión"]
@@ -275,13 +275,13 @@ graph LR
 
 ## Idioma
 
-Toda la documentación, prompts del agente y contenido de skills están en **español**, siguiendo la convención del proyecto definida en `AGENTS.md`.
+Toda la documentación, prompts del agente y contenido de skills están en **español**, siguiendo la convención del proyecto definida en `CLAUDE.md`.
 
 ---
 
 ## Convenciones del Proyecto
 
-Antes de modificar el agente o las skills, leer [`AGENTS.md`](AGENTS.md). Contiene:
+Antes de modificar el agente o las skills, leer [`CLAUDE.md`](CLAUDE.md). Contiene:
 - Arquitectura de 1 agente + 14 skills y orden estricto de fases
 - Ubicación de artefactos (plan, plan de pruebas, scripts, resultados, reporte)
 - Reglas de selección de herramientas (single-tool por defecto)
